@@ -1,4 +1,4 @@
-## Features (Pre-packed)
+## Features (pre-configured)
 
 - ⚡️ [React 18](https://github.com/facebook/react/), [TypeScript 4](https://github.com/microsoft/TypeScript), and [Vite 3](https://github.com/vitejs/vite)
 
