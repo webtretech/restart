@@ -25,6 +25,10 @@ When you use this template, follow the checklist to update your info properly
 - [ ] Change the favicon in `public`
 - [ ] Clean up the READMEs and remove routes
 
+## Todo
+
+- [ ] Add unit testing with [`vitest`](https://github.com/vitest-dev/vitest)
+
 ## Usage
 
 ### Installation
