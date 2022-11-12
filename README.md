@@ -6,7 +6,7 @@
 
 - 📑 [State Management via Redux](https://github.com/reduxjs/redux) - with logging for development
 
-- 📲 Theme system with `dark mode` support - [`theme-change`](https://github.com/saadeghi/theme-change) for theme switching
+- 📲 Theme System with `Dark Mode` support - [`theme-change`](https://github.com/saadeghi/theme-change) for theme switching
 
 - 🎨 [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) - a utility-first CSS framework for rapid UI development.
 
