@@ -1,0 +1,59 @@
+import { HiMenuAlt2 } from "react-icons/hi";
+import { Link, Outlet } from "react-router-dom";
+import DarkMode from "../components/DarkMode";
+
+export default function MasterLayout() {
+  return (
+    <>
+      <div className="navbar fixed z-20 border-b border-b-base-200 bg-base-100">
+        <div className="flex-none">
+          <label
+            htmlFor="side-navbar-drawer-left"
+            className="btn-ghost btn-primary drawer-button btn-circle btn"
+          >
+            <HiMenuAlt2 className="h-5 w-5" />
+          </label>
+        </div>
+        <div className="flex-1">
+          <Link className="ml-2 text-2xl font-bold" to="/">
+            {import.meta.env.VITE_APP_NAME}
+          </Link>
+        </div>
+        <div className="flex-none">
+          <DarkMode />
+
+          <div className="dropdown-end dropdown">
+            <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
+              <div className="w-10 rounded-full">
+                <img
+                  src="https://placeimg.com/40/40/people"
+                  loading="lazy"
+                  alt="Profile"
+                />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
+            >
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+                <a>Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <Outlet />
+    </>
+  );
+}

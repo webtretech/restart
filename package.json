@@ -1,0 +1,52 @@
+{
+  "name": "react-typescript-starter",
+  "private": true,
+  "description": "A React + TypeScript + TailwindCSS starter template using Vite with some cool pre-configured features, it's fast.",
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": "^14"
+  },
+  "scripts": {
+    "start:dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^3.1.4",
+    "react-icons": "^4.6.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3",
+    "theme-change": "^2.2.0",
+    "ts-toolbelt": "^9.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.8",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "daisyui": "^2.39.0",
+    "postcss": "^8.4.18",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.2.3",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.0",
+    "vite-plugin-ejs": "^1.5.0"
+  }
+}
