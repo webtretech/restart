@@ -2,9 +2,9 @@
 
 - ⚡️ [React 18](https://github.com/facebook/react/), [TypeScript 4](https://github.com/microsoft/TypeScript), and [Vite 3](https://github.com/vitejs/vite)
 
-- 🗂 Routing with [`react-router-v6`](https://github.com/remix-run/react-router) (incl: lazy loading)
+- 🗂 Routing using [`react-router-v6`](https://github.com/remix-run/react-router) with lazy loading and protected routes support
 
-- 📑 [Layout System](./src/layouts)
+- 📑 [Layout System](./src/layouts) with multiple layout support
 
 - 💮 [State Management via Redux](https://github.com/reduxjs/redux) - with hooks and logging for development
 
@@ -34,6 +34,7 @@ When you use this template, follow the checklist to update your info properly
 ## Todo
 
 - [ ] Add unit testing with [`vitest`](https://github.com/vitest-dev/vitest)
+- [ ] Improve code style and IDE support
 
 ## Usage
 
