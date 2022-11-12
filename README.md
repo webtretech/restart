@@ -1,14 +1,20 @@
 ## Features (Pre-packed)
 
-- ⚡️ [React 18](https://github.com/facebook/react/), [TypeScript](https://github.com/microsoft/TypeScript), and [Vite 3](https://github.com/vitejs/vite)
+- ⚡️ [React 18](https://github.com/facebook/react/), [TypeScript 4](https://github.com/microsoft/TypeScript), and [Vite 3](https://github.com/vitejs/vite)
 
 - 🗂 Routing with [`react-router-v6`](https://github.com/remix-run/react-router) (incl: lazy loading)
 
-- 📑 [State Management via Redux](https://github.com/reduxjs/redux) - with logging for development
+- 📑 [Layout System](./src/layouts)
 
-- 📲 Theme System with `Dark Mode` support - [`theme-change`](https://github.com/saadeghi/theme-change) for theme switching
+- 💮 [State Management via Redux](https://github.com/reduxjs/redux) - with hooks and logging for development
 
-- 🎨 [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) + [DaisyUI](https://github.com/saadeghi/daisyui) - a utility-first CSS framework for rapid UI development.
+- ⛔ Global error handling with [`error-boundary`](https://github.com/bvaughn/react-error-boundary) - can be used for logging to third-party services
+
+- 🎨 [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) - a utility-first CSS framework for rapid UI development.
+
+- 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) - the most popular Tailwind CSS component library.
+
+- 📲 Theme System with `light-and-dark` mode support - [`theme-change`](https://github.com/saadeghi/theme-change) for theme switching
 
 - 😃 [Use icons from popular icon packs](https://github.com/react-icons/react-icons)
 
