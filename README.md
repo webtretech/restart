@@ -8,7 +8,7 @@
 
 - 📲 Theme System with `Dark Mode` support - [`theme-change`](https://github.com/saadeghi/theme-change) for theme switching
 
-- 🎨 [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) - a utility-first CSS framework for rapid UI development.
+- 🎨 [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) + [DaisyUI](https://github.com/saadeghi/daisyui) - a utility-first CSS framework for rapid UI development.
 
 - 😃 [Use icons from popular icon packs](https://github.com/react-icons/react-icons)
 
