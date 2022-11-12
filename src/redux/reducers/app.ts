@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface AppState {
-  loaded: boolean;
+  counter: number;
 }
 
 const initialState: AppState = {
-  loaded: false,
+  counter: 0,
 };
 
 // Create "app" reducer (a slice of the state)
@@ -13,12 +13,12 @@ export const appSlice = createSlice({
   name: "app",
   initialState,
   reducers: {
-    setLoaded: (state, action: PayloadAction<AppState["loaded"]>) => {
-      state.loaded = action.payload;
+    setCounter: (state, action: PayloadAction<AppState["counter"]>) => {
+      state.counter = action.payload;
     },
   },
 });
 
-export const { setLoaded } = appSlice.actions;
+export const { setCounter } = appSlice.actions;
 
 export default appSlice.reducer;
