@@ -18,6 +18,8 @@
 
 - 😃 [Use icons from popular icon packs](https://github.com/react-icons/react-icons)
 
+- 🦾 Strongly Typed: written in [TypeScript](https://www.typescriptlang.org/)
+
 ### Plugins
 
 - [`vite-plugin-ejs`](https://github.com/trapcodeio/vite-plugin-ejs) - use ejs in your HTML
@@ -71,7 +73,6 @@ $ npm run preview
 ### Test
 
 ```bash
-# unit tests
 $ npm test
 ```
 
