@@ -2,7 +2,7 @@
 
 - ⚡️ [React 18](https://github.com/facebook/react/), [TypeScript 4](https://github.com/microsoft/TypeScript), and [Vite 3](https://github.com/vitejs/vite)
 
-- 🗂 Routing using [`react-router-v6`](https://github.com/remix-run/react-router) with lazy loading and protected routes support
+- 🗂 Routing via [`react-router-v6`](https://github.com/remix-run/react-router) with lazy loading and protected routes support
 
 - 📑 [Layout System](./src/layouts) with multiple layout support
 
