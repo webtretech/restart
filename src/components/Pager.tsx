@@ -11,7 +11,7 @@ export default function Pager(props: IRoute) {
   useEffect(() => {
     // Check auth status and redirect if user is a guest
     if (props.protected /* && isGuestUser */) {
-      navigate({ pathname: "/" }, { state: { from: pathname + search } });
+      navigate("/", { state: { from: pathname + search } });
     }
   }, [pathname, search]);
 
