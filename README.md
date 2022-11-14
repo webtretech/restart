@@ -28,7 +28,6 @@
 
 When you use this template, follow the checklist to update your info properly
 
-- [ ] Change the author name in `LICENSE`
 - [ ] Create a `.env` file from `.env.example`
 - [ ] Change the favicon in `public`
 - [ ] Clean up the READMEs and remove routes
