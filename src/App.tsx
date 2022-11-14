@@ -8,9 +8,9 @@ export default function App() {
       <Routes>
         {routes.map((router, key) => (
           <Route key={key} {...router.layout}>
-            {router.routes.map((route, index) => (
+            {router.routes.map((route, k) => (
               <Route
-                key={index}
+                key={k}
                 path={route.path}
                 index={route.index}
                 element={<Pager {...route} />}
