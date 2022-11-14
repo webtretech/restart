@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { ErrorBoundary } from "react-error-boundary";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import ErrorFallback from "./components/ErrorFallback";
 import "./main.css";
@@ -23,7 +24,9 @@ root.render(
   <React.StrictMode>
     <ErrorBoundary FallbackComponent={ErrorFallback} onError={errorHandler}>
       <Provider store={reduxStore}>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </Provider>
     </ErrorBoundary>
   </React.StrictMode>

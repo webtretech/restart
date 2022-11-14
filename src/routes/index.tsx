@@ -2,9 +2,6 @@ import { lazy } from "react";
 import { AtLeast } from "ts-toolbelt/out/Object/AtLeast";
 import MasterLayout from "../layouts/Master";
 
-// Lazy load the routes
-const Home = lazy(() => import("../views/Home"));
-
 export interface IRoute {
   path?: string;
   index?: boolean;
@@ -17,7 +14,10 @@ export type RouteGroup = {
   routes: IRoute[];
 };
 
-// Routes
+// Lazy load the routes
+const Home = lazy(() => import("../views/Home"));
+const NotFound = lazy(() => import("../views/NotFound"));
+
 const routes: RouteGroup[] = [
   {
     layout: { path: "/", element: <MasterLayout /> },
@@ -25,6 +25,10 @@ const routes: RouteGroup[] = [
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },
