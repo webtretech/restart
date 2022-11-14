@@ -14,7 +14,7 @@ export type RouteGroup = {
   routes: IRoute[];
 };
 
-// Lazy load the routes
+// Lazy load the routes to improve performance
 const Home = lazy(() => import("../views/Home"));
 const NotFound = lazy(() => import("../views/NotFound"));
 
@@ -34,5 +34,4 @@ const routes: RouteGroup[] = [
   },
 ];
 
-// Register other routes by adding to the array
-export default [...routes];
+export default routes;
