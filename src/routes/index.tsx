@@ -34,5 +34,4 @@ const routes: RouteGroup[] = [
   },
 ];
 
-// Register other routes by adding to the array
-export default [...routes];
+export default routes;
