@@ -2,18 +2,18 @@ import { lazy } from "react";
 import { AtLeast } from "ts-toolbelt/out/Object/AtLeast";
 import MasterLayout from "../layouts/Master";
 
-interface ILayout {
+type Layout = {
   path?: string;
   element: JSX.Element;
-}
+};
 
-export interface IRoute extends ILayout {
+export interface IRoute extends Layout {
   index?: boolean;
   protected?: boolean;
 }
 
 export type RouteGroup = {
-  layout: AtLeast<ILayout, "path" | "element">;
+  layout: AtLeast<Layout, "path" | "element">;
   routes: IRoute[];
 };
 
