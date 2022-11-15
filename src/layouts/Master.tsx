@@ -1,6 +1,6 @@
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Link, Outlet } from "react-router-dom";
-import DarkMode from "../components/DarkMode";
+import ThemeChanger from "../components/ThemeChanger";
 
 export default function MasterLayout() {
   return (
@@ -20,7 +20,7 @@ export default function MasterLayout() {
           </Link>
         </div>
         <div className="flex-none">
-          <DarkMode />
+          <ThemeChanger />
 
           <div className="dropdown-end dropdown">
             <label tabIndex={0} className="btn-ghost btn-circle avatar btn">

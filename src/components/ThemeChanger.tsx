@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { themeChange } from "theme-change";
 
-export default function DarkMode() {
+export default function ThemeChanger() {
   useEffect(() => {
+    // False parameter is required for react project
     themeChange(false);
   }, []);
 

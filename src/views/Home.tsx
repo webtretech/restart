@@ -3,7 +3,8 @@ import { useAppDispatch, useAppSelector } from "../hooks/redux";
 import { setCounter } from "../redux/reducers/app";
 
 export default function Home() {
-  // Access the dispatcher & fully-typed state from anywhere in the app using hooks
+  // Access the dispatcher & fully-typed state
+  // from anywhere in the app using hooks
   const dispatch = useAppDispatch();
   const { counter } = useAppSelector((state) => state.app);
 
