@@ -2,7 +2,7 @@
 
 - ⚡️ [React 18](https://github.com/facebook/react/), [TypeScript 4](https://github.com/microsoft/TypeScript), and [Vite 3](https://github.com/vitejs/vite)
 
-- 🗂 Routing via [`react-router-v6`](https://github.com/remix-run/react-router) with lazy loading and protected routes support
+- 🗂 Routing via [`react-router v6`](https://github.com/remix-run/react-router) with lazy loading and protected routes support
 
 - 📑 [Layout System](./src/layouts) with multiple layout support
 
@@ -14,7 +14,7 @@
 
 - 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) - the most popular Tailwind CSS component library.
 
-- 📲 Theme System with `light-and-dark` mode support - [`theme-change`](https://github.com/saadeghi/theme-change) for theme switching
+- 📲 Theme System with `light-and-dark` mode - [`theme-change`](https://github.com/saadeghi/theme-change) for theme switching
 
 - 😃 [Use icons from popular icon packs](https://github.com/react-icons/react-icons)
 
