@@ -1,15 +1,26 @@
-import { useEffect } from "react";
+import { HTMLAttributes, useEffect } from "react";
 import { themeChange } from "theme-change";
+import { useAppDispatch, useAppSelector } from "../hooks/redux";
+import { toggleDarkTheme } from "../redux/reducers/app";
 
-export default function ThemeChanger() {
+export default function ThemeChanger({
+  className,
+}: HTMLAttributes<HTMLLabelElement>) {
+  const dispatch = useAppDispatch();
+  const { darkTheme } = useAppSelector((state) => state.app);
+
   useEffect(() => {
     // False parameter is required for react projects
     themeChange(false);
   }, []);
 
   return (
-    <label className="swap btn-ghost swap-rotate btn-circle btn">
-      <input type="checkbox" />
+    <label className={`swap-rotate swap btn-ghost btn-circle btn ${className}`}>
+      <input
+        type="checkbox"
+        checked={darkTheme}
+        onChange={() => dispatch(toggleDarkTheme())}
+      />
 
       <svg
         className="swap-on h-5 w-5 fill-current"
