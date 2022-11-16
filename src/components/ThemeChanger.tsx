@@ -3,12 +3,12 @@ import { themeChange } from "theme-change";
 
 export default function ThemeChanger() {
   useEffect(() => {
-    // False parameter is required for react project
+    // False parameter is required for react projects
     themeChange(false);
   }, []);
 
   return (
-    <label className="swap-rotate swap btn-ghost btn-circle btn">
+    <label className="swap btn-ghost swap-rotate btn-circle btn">
       <input type="checkbox" />
 
       <svg
