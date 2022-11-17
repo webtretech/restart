@@ -1,9 +1,9 @@
 import { Suspense, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { IRoute } from "../routes";
+import { Route } from "../routes";
 import Spinner from "./Spinner";
 
-export default function Pager(route: IRoute) {
+export default function Pager(route: Route) {
   const navigate = useNavigate();
   const { pathname, search } = useLocation();
 
