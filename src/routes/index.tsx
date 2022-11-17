@@ -1,20 +1,18 @@
 import { lazy } from "react";
-import { AtLeast } from "ts-toolbelt/out/Object/AtLeast";
+import { O } from "ts-toolbelt";
 import MasterLayout from "../layouts/Master";
 
-type Layout = {
-  path?: string;
-  element: JSX.Element;
-};
+type RoutePath = O.AtLeast<{ path: string; index: boolean }, "path" | "index">;
+type RouteLayout = O.Merge<Pick<RoutePath, "path">, { element: JSX.Element }>;
 
-export interface IRoute extends Layout {
-  index?: boolean;
-  protected?: boolean;
-}
+export type Route = O.Merge<
+  O.Merge<RoutePath, Pick<RouteLayout, "element">>,
+  { protected?: boolean }
+>;
 
 export type RouteGroup = {
-  layout: AtLeast<Layout, "path" | "element">;
-  routes: IRoute[];
+  layout: O.AtLeast<RouteLayout, "path" | "element">;
+  routes: Route[];
 };
 
 // Lazy load the routes to improve performance
