@@ -35,7 +35,6 @@ When you use this template, follow the checklist to update your info properly
 ## Todo
 
 - [ ] Add unit testing with [`vitest`](https://github.com/vitest-dev/vitest)
-- [ ] Improve code style and IDE support
 
 ## Usage
 
