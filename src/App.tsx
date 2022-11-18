@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Pager from "./components/Pager";
 import routes from "./routes";
+import NotFound from "./views/NotFound";
 
 export default function App() {
   return (
@@ -13,11 +14,16 @@ export default function App() {
                 key={k}
                 path={route.path}
                 index={route.index}
-                element={<Pager {...route} />}
+                element={
+                  <Pager protected={router.layout.protected} {...route} />
+                }
               />
             ))}
           </Route>
         ))}
+
+        {/* 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
