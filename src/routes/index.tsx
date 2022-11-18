@@ -3,12 +3,13 @@ import { O } from "ts-toolbelt";
 import MasterLayout from "../layouts/Master";
 
 type RoutePath = O.AtLeast<{ path: string; index: boolean }, "path" | "index">;
-type RouteLayout = O.Merge<Pick<RoutePath, "path">, { element: JSX.Element }>;
 
-export type Route = O.Merge<
-  O.Merge<RoutePath, Pick<RouteLayout, "element">>,
-  { protected?: boolean }
+type RouteLayout = O.Merge<
+  Pick<RoutePath, "path">,
+  { element: JSX.Element; protected?: boolean }
 >;
+
+export type Route = O.Merge<RoutePath, RouteLayout>;
 
 export type RouteGroup = {
   layout: O.AtLeast<RouteLayout, "path" | "element">;
@@ -17,7 +18,6 @@ export type RouteGroup = {
 
 // Lazy load the routes to improve performance
 const Home = lazy(() => import("../views/Home"));
-const NotFound = lazy(() => import("../views/NotFound"));
 
 const routes: RouteGroup[] = [
   {
@@ -26,10 +26,6 @@ const routes: RouteGroup[] = [
       {
         index: true,
         element: <Home />,
-      },
-      {
-        path: "*",
-        element: <NotFound />,
       },
     ],
   },
