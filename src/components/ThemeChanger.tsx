@@ -12,10 +12,10 @@ export default function ThemeChanger({
   useEffect(() => {
     // False parameter is required for react projects
     themeChange(false);
-  }, []);
+  }, [darkTheme]);
 
   return (
-    <label className={`swap-rotate swap btn-ghost btn-circle btn ${className}`}>
+    <label className={`swap btn-ghost swap-rotate btn-circle btn ${className}`}>
       <input
         type="checkbox"
         checked={darkTheme}
