@@ -8,13 +8,13 @@
 
 - 💮 [State Management via Redux](https://github.com/reduxjs/redux) - with hooks and logging for development
 
-- ⛔ Global error handling with [`error-boundary`](https://github.com/bvaughn/react-error-boundary) - can be used for logging to third-party services
+- ⛔ Global error handling with [`error-boundary`](https://github.com/bvaughn/react-error-boundary) - can also be used for logging to third-party services
 
 - 🎨 [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) - a utility-first CSS framework for rapid UI development.
 
 - 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) - the most popular Tailwind CSS component library.
 
-- 📲 Theme System with `light-and-dark` mode - [`theme-change`](https://github.com/saadeghi/theme-change) for theme switching
+- 📲 Theme System with `light-and-dark` switch mode
 
 - 😃 [Use icons from popular icon packs](https://github.com/react-icons/react-icons)
 
