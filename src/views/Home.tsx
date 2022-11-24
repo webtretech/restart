@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
 import { setCounter } from "../redux/reducers/app";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   // Access the dispatcher & fully-typed state
   // from anywhere in the app using hooks
   const dispatch = useAppDispatch();

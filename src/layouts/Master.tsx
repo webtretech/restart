@@ -2,7 +2,7 @@ import { HiMenuAlt2 } from "react-icons/hi";
 import { Link, Outlet } from "react-router-dom";
 import ThemeChanger from "../components/ThemeChanger";
 
-export default function MasterLayout() {
+export default function MasterLayout(): JSX.Element {
   return (
     <>
       <div className="navbar fixed z-20 border-b border-b-base-200 bg-base-100">

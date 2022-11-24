@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Route } from "../routes";
 import Spinner from "./Spinner";
 
-export default function Pager(route: Route) {
+export default function Pager(route: Route): JSX.Element {
   const navigate = useNavigate();
   const { pathname, search } = useLocation();
 

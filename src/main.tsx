@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(
 );
 
 // Global error handler
-const errorHandler = (error: Error, info: { componentStack: string }) => {
+const errorHandler = (error: Error, info: { componentStack: string }): void => {
   // You can log errors to third-party services
   if (import.meta.env.DEV) console.error(error, info);
 };
