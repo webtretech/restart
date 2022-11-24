@@ -5,7 +5,7 @@ import { toggleDarkTheme } from "../redux/reducers/app";
 
 export default function ThemeChanger({
   className,
-}: HTMLAttributes<HTMLLabelElement>) {
+}: HTMLAttributes<HTMLLabelElement>): JSX.Element {
   const dispatch = useAppDispatch();
   const { darkTheme } = useAppSelector((state) => state.app);
 
@@ -15,7 +15,7 @@ export default function ThemeChanger({
   }, [darkTheme]);
 
   return (
-    <label className={`swap btn-ghost swap-rotate btn-circle btn ${className}`}>
+    <label className={`swap-rotate swap btn-ghost btn-circle btn ${className}`}>
       <input
         type="checkbox"
         checked={darkTheme}

@@ -1,4 +1,4 @@
-export default function Spinner() {
+export default function Spinner(): JSX.Element {
   return (
     <div className="flex h-screen">
       <div className="m-auto">

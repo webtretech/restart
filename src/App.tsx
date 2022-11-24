@@ -3,7 +3,7 @@ import Pager from "./components/Pager";
 import routes from "./routes";
 import NotFound from "./views/NotFound";
 
-export default function App() {
+export default function App(): JSX.Element {
   return (
     <div className="min-h-screen w-full">
       <Routes>
