@@ -12,13 +12,17 @@ export default function ThemeChanger({
   useEffect(() => {
     // False parameter is required for react projects
     themeChange(false);
-  }, [darkTheme]);
+  }, []);
 
   return (
-    <label className={`swap-rotate swap btn-ghost btn-circle btn ${className}`}>
+    <label
+      className={`swap-rotate swap btn-ghost btn-circle btn ${className}`}
+      htmlFor="app-theme-changer"
+    >
       <input
         type="checkbox"
         checked={darkTheme}
+        id="app-theme-changer"
         onChange={() => dispatch(toggleDarkTheme())}
       />
 
