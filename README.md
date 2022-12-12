@@ -76,4 +76,4 @@ $ npm test
 
 ## License
 
-This project is opened under the <a href="https://github.com/webtretech/react-typescript-starter/blob/master/LICENSE" target="_blank">MIT 2.0 License</a> which allows very broad use for both academic and commercial purposes.
+Copyright (c) 2022 <a href="https://github.com/webtretech/restart/blob/master/LICENSE" target="_blank">MIT</a>, <a href="https://github.com/webtretech" target="_blank">Webtre Technologies</a>
