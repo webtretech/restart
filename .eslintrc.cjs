@@ -5,7 +5,12 @@ module.exports = {
     sourceType: "module",
     project: "tsconfig.json",
   },
-  ignorePatterns: [".eslintrc.cjs"],
+  ignorePatterns: [
+    ".eslintrc.cjs",
+    "postcss.config.cjs",
+    "prettier.config.cjs",
+    "tailwind.config.cjs",
+  ],
   env: {
     browser: true,
     es2021: true,
