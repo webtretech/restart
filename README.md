@@ -30,7 +30,7 @@ When you use this template, follow the checklist to update your info properly
 
 - [ ] Create a `.env` file from `.env.example`
 - [ ] Change the favicon in `public`
-- [ ] Clean up the READMEs
+- [ ] Clean up `README.md`
 
 ## Todo
 
@@ -41,7 +41,7 @@ When you use this template, follow the checklist to update your info properly
 ### Installation
 
 ```bash
-$ npm install
+npm install
 ```
 
 ### Development
@@ -49,7 +49,7 @@ $ npm install
 Run and visit http://localhost:5173
 
 ```bash
-$ npm run start:dev
+npm run start:dev
 ```
 
 ### Build
@@ -57,7 +57,7 @@ $ npm run start:dev
 To build the App, run
 
 ```bash
-$ npm run build
+npm run build
 ```
 
 ### Preview
@@ -65,13 +65,13 @@ $ npm run build
 To preview the App, run
 
 ```bash
-$ npm run preview
+npm run preview
 ```
 
 ### Test
 
 ```bash
-$ npm test
+npm test
 ```
 
 ## License
