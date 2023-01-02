@@ -1,6 +1,6 @@
 ## Features (pre-configured)
 
-- ⚡️ [React 18](https://github.com/facebook/react/), [TypeScript 4](https://github.com/microsoft/TypeScript), and [Vite 3](https://github.com/vitejs/vite)
+- ⚡️ [React 18](https://github.com/facebook/react/), [TypeScript](https://github.com/microsoft/TypeScript), and [Vite](https://github.com/vitejs/vite)
 
 - 🗂 Routing via [`react-router-v6`](https://github.com/remix-run/react-router) with lazy loading and protected routes support
 
