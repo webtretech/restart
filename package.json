@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "engines": {
-    "node": ">14"
+    "node": ">=16"
   },
   "scripts": {
     "start:dev": "vite",
