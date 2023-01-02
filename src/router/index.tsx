@@ -7,13 +7,10 @@ const wrappedRouter = (routes: RouteObjectPro[]): RouteObject[] => {
     const { element, children, isProtected, ...rest } = route;
     const newRoute: RouteObject = { ...rest };
 
-    /**
-     * Check protected routes with (isProtected)
-     *
-     * if (isProtected) {
-     * newRoute.element = <CheckIsLogin>{element}</CheckIsLogin>;
-     * } else
-     */
+    if (isProtected) {
+      // Check protected routes and handle auth / redirection
+    }
+
     newRoute.element = element;
 
     if (Array.isArray(children) && children.length) {
