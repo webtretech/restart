@@ -7,6 +7,7 @@ module.exports = {
   },
   ignorePatterns: [
     ".eslintrc.cjs",
+    "vite.config.ts",
     "postcss.config.cjs",
     "prettier.config.cjs",
     "tailwind.config.cjs",
@@ -26,5 +27,6 @@ module.exports = {
     "@typescript-eslint/promise-function-async": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/triple-slash-reference": "off",
   },
 };
