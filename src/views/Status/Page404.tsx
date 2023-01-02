@@ -1,4 +1,4 @@
-export default function NotFound(): JSX.Element {
+export default function Page404(): JSX.Element {
   return (
     <div className="flex h-screen">
       <div className="m-auto text-center">
