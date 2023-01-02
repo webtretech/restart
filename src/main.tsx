@@ -4,7 +4,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import { Provider } from "react-redux";
 import App from "./App";
 import ErrorFallback from "./components/ErrorFallback";
-import "./main.css";
+import "./style.css";
 import { store as reduxStore } from "./redux";
 
 // Create app

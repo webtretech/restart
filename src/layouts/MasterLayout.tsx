@@ -1,5 +1,6 @@
 import { HiMenuAlt2 } from "react-icons/hi";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+import SuspenseOutlet from "../components/SuspenseOutlet";
 import ThemeChanger from "../components/ThemeChanger";
 
 export default function MasterLayout(): JSX.Element {
@@ -53,7 +54,7 @@ export default function MasterLayout(): JSX.Element {
         </div>
       </div>
 
-      <Outlet />
+      <SuspenseOutlet />
     </>
   );
 }

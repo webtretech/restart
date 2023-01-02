@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { RouteObject } from "react-router-dom";
-import MasterLayout from "../layouts/Master";
+import MasterLayout from "../layouts/MasterLayout";
 import Page404 from "../views/Status/Page404";
 
 // Lazy load the routes to improve performance
