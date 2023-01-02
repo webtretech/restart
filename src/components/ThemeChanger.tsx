@@ -10,7 +10,7 @@ export default function ThemeChanger({
   const { darkTheme } = useAppSelector((state) => state.app);
 
   useEffect(() => {
-    // False parameter is required for react projects
+    // theme-change: false parameter is required
     themeChange(false);
   }, []);
 
