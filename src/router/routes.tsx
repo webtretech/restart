@@ -1,12 +1,12 @@
 import { lazy } from "react";
-import { RouteObject } from "react-router-dom";
 import MasterLayout from "../layouts/MasterLayout";
 import Page404 from "../views/Status/Page404";
+import { AppRouteObject } from "./interface";
 
 // Lazy load the routes to improve performance
 const Home = lazy(() => import("../views/Home"));
 
-const routes: RouteObject[] = [
+const routes: AppRouteObject[] = [
   {
     path: "/",
     element: <MasterLayout />,
