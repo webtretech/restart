@@ -1,6 +1,6 @@
 import { RouteObject } from "react-router-dom";
 
-export type RouteObjectPro = RouteObject & {
+export type AppRouteObject = RouteObject & {
   /**
    * @description routes that need login
    */
@@ -9,5 +9,5 @@ export type RouteObjectPro = RouteObject & {
   /**
    * @description child route
    */
-  children?: RouteObjectPro[];
+  children?: AppRouteObject[];
 };
