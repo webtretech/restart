@@ -1,7 +1,7 @@
+import { useAppDispatch, useAppSelector } from "@/hooks/redux";
+import { toggleDarkTheme } from "@/redux/reducers/app";
 import { HTMLAttributes, useEffect } from "react";
 import { themeChange } from "theme-change";
-import { useAppDispatch, useAppSelector } from "../hooks/redux";
-import { toggleDarkTheme } from "../redux/reducers/app";
 
 export default function ThemeChanger({
   className,

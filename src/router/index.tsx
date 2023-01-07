@@ -1,5 +1,5 @@
-import routes from "./routes";
-import { AppRouteObject } from "./interface";
+import { AppRouteObject } from "@/router/interface";
+import routes from "@/router/routes";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 const wrappedRouter = (routes: AppRouteObject[]): RouteObject[] => {

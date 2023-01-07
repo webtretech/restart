@@ -1,7 +1,7 @@
+import SuspenseOutlet from "@/components/SuspenseOutlet";
+import ThemeChanger from "@/components/ThemeChanger";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import SuspenseOutlet from "../components/SuspenseOutlet";
-import ThemeChanger from "../components/ThemeChanger";
 
 export default function MasterLayout(): JSX.Element {
   return (
