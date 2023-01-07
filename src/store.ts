@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import loggerMiddleware from "./middlewares/logger";
-import app from "./reducers/app";
+import loggerMiddleware from "@/redux/middlewares/logger";
+import app from "@/redux/reducers/app";
 
 // Create the global store
-export const store = configureStore({
+const store = configureStore({
   // Register the reducers
   reducer: { app },
   middleware: (getDefaultMiddleware) => {
@@ -21,3 +21,5 @@ export const store = configureStore({
 export type RootState = ReturnType<typeof store.getState>;
 // Inferred types
 export type AppDispatch = typeof store.dispatch;
+
+export default store;

@@ -1,6 +1,6 @@
+import { useAppDispatch, useAppSelector } from "@/hooks/redux";
+import { setCounter } from "@/redux/reducers/app";
 import { useCallback } from "react";
-import { useAppDispatch, useAppSelector } from "../hooks/redux";
-import { setCounter } from "../redux/reducers/app";
 
 export default function Home(): JSX.Element {
   // Access the dispatcher & fully-typed state
@@ -10,12 +10,14 @@ export default function Home(): JSX.Element {
 
   // Increase the counter
   const increaseCounter = useCallback(() => {
-    dispatch(setCounter(counter + 1));
+    const increasedCount = counter + 1;
+    dispatch(setCounter(increasedCount));
   }, [counter]);
 
   // Decrease the counter
   const decreaseCounter = useCallback(() => {
-    dispatch(setCounter(counter - 1));
+    const decreasedCount = counter - 1;
+    dispatch(setCounter(decreasedCount));
   }, [counter]);
 
   return (
