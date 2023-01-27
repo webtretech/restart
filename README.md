@@ -18,6 +18,12 @@
 
 - 😃 [Use icons from popular icon packs](https://github.com/react-icons/react-icons)
 
+- 🗂 Absolute import — Import folders and files using the `@` prefix
+
+- 📏 ESLint — Pluggable JavaScript linter
+
+- 💖 Prettier — Opinionated Code Formatter
+
 - 🦾 Strongly Typed: written in [TypeScript](https://www.typescriptlang.org/)
 
 ### Plugins
