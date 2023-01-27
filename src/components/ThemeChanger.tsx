@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/redux";
 import { toggleDarkTheme } from "@/redux/reducers/app";
+import clsx from "clsx";
 import { HTMLAttributes, useEffect } from "react";
 import { themeChange } from "theme-change";
 
@@ -16,7 +17,7 @@ export default function ThemeChanger({
 
   return (
     <label
-      className={`swap-rotate swap btn-ghost btn-circle btn ${className}`}
+      className={clsx("swap-rotate swap btn-ghost btn-circle btn", className)}
       htmlFor="app-theme-changer"
     >
       <input

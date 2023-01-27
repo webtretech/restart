@@ -1,16 +1,25 @@
 import SuspenseOutlet from "@/components/SuspenseOutlet";
 import ThemeChanger from "@/components/ThemeChanger";
+import clsx from "clsx";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 export default function MasterLayout(): JSX.Element {
   return (
     <>
-      <div className="navbar fixed z-20 border-b border-b-base-200 bg-base-100">
+      <div
+        className={clsx(
+          "navbar fixed z-20 border-b",
+          "border-b-base-200 bg-base-100"
+        )}
+      >
         <div className="flex-none">
           <label
             htmlFor="side-navbar-drawer-left"
-            className="btn-ghost btn-primary drawer-button btn-circle btn"
+            className={clsx(
+              "btn btn-primary btn-circle",
+              "btn-ghost drawer-button"
+            )}
           >
             <HiMenuAlt2 className="h-5 w-5" />
           </label>
@@ -35,7 +44,10 @@ export default function MasterLayout(): JSX.Element {
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
+              className={clsx(
+                "dropdown-content menu menu-compact rounded-box",
+                "mt-3 w-52 bg-base-100 p-2 shadow"
+              )}
             >
               <li>
                 <a className="justify-between">
