@@ -1,23 +1,23 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/redux";
-import { setCounter } from "@/redux/reducers/app";
+import { counterActions } from "@/redux/counter/counterSlice";
 import { useCallback } from "react";
 
 export default function Home(): JSX.Element {
   // Access the dispatcher & fully-typed state
   // from anywhere in the app using hooks
   const dispatch = useAppDispatch();
-  const { counter } = useAppSelector((state) => state.app);
+  const { counter } = useAppSelector((state) => state.counter);
 
   // Increase the counter
   const increaseCounter = useCallback(() => {
     const increasedCount = counter + 1;
-    dispatch(setCounter(increasedCount));
+    dispatch(counterActions.setCounter(increasedCount));
   }, [counter]);
 
   // Decrease the counter
   const decreaseCounter = useCallback(() => {
     const decreasedCount = counter - 1;
-    dispatch(setCounter(decreasedCount));
+    dispatch(counterActions.setCounter(decreasedCount));
   }, [counter]);
 
   return (
