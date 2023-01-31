@@ -1,20 +1,23 @@
-import { configureStore } from "@reduxjs/toolkit";
-import loggerMiddleware from "@/redux/middlewares/logger";
-import app from "@/redux/reducers/app";
+import appSlice from "@/redux/app/appSlice";
+import counterSlice from "@/redux/counter/counterSlice";
+import { Middleware, configureStore } from "@reduxjs/toolkit";
+import logger from "redux-logger";
+
+// Global middleware
+const middleware: Middleware[] = [];
+// Development middleware
+if (import.meta.env.DEV) {
+  middleware.push(logger);
+}
 
 // Create the global store
 const store = configureStore({
-  // Register the reducers
-  reducer: { app },
-  middleware: (getDefaultMiddleware) => {
-    // Only include loggerMiddleware during development
-    if (import.meta.env.DEV) {
-      return getDefaultMiddleware().concat([loggerMiddleware]);
-    }
-
-    // Added production middleware here by concatenation
-    return getDefaultMiddleware();
+  reducer: {
+    app: appSlice,
+    counter: counterSlice,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(middleware),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/redux";
-import { toggleDarkTheme } from "@/redux/reducers/app";
+import { getDarkTheme } from "@/redux/app/appSelector";
+import { appActions } from "@/redux/app/appSlice";
 import clsx from "clsx";
 import { HTMLAttributes, useEffect } from "react";
 import { themeChange } from "theme-change";
@@ -8,7 +9,7 @@ export default function ThemeChanger({
   className,
 }: HTMLAttributes<HTMLLabelElement>): JSX.Element {
   const dispatch = useAppDispatch();
-  const { darkTheme } = useAppSelector((state) => state.app);
+  const darkTheme = useAppSelector(getDarkTheme);
 
   useEffect(() => {
     // theme-change: false parameter is required
@@ -24,7 +25,7 @@ export default function ThemeChanger({
         type="checkbox"
         checked={darkTheme}
         id="app-theme-changer"
-        onChange={() => dispatch(toggleDarkTheme())}
+        onChange={() => dispatch(appActions.toggleDarkTheme())}
       />
 
       <svg
