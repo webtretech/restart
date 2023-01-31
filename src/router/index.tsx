@@ -1,6 +1,6 @@
 import { AppRouteObject } from "@/router/interface";
 import routes from "@/router/routes";
-import { createBrowserRouter, RouteObject } from "react-router-dom";
+import { RouteObject, createBrowserRouter } from "react-router-dom";
 
 const wrappedRouter = (routes: AppRouteObject[]): RouteObject[] => {
   return routes.map((route: AppRouteObject) => {
