@@ -17,7 +17,7 @@ export default function MasterLayout(): JSX.Element {
           <label
             htmlFor="side-navbar-drawer-left"
             className={clsx(
-              "btn btn-primary btn-circle",
+              "btn-primary btn-circle btn",
               "btn-ghost drawer-button"
             )}
           >
@@ -45,7 +45,7 @@ export default function MasterLayout(): JSX.Element {
             <ul
               tabIndex={0}
               className={clsx(
-                "dropdown-content menu menu-compact rounded-box",
+                "dropdown-content menu rounded-box menu-compact",
                 "mt-3 w-52 bg-base-100 p-2 shadow"
               )}
             >
