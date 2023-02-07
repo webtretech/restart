@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
             <h2 className="card-title font-sans text-8xl">{counter}</h2>
             <p className="p-4 text-sm">
               An example state management using redux, check the console for
-              change logs.
+              action logs.
             </p>
             <div className="card-actions justify-end">
               <button className="btn-error btn" onClick={decreaseCounter}>
