@@ -1,13 +1,14 @@
 import SuspenseOutlet from "@/components/SuspenseOutlet";
 import ThemeChanger from "@/components/ThemeChanger";
 import clsx from "clsx";
+import { Dropdown, Navbar } from "react-daisyui";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 export default function MasterLayout(): JSX.Element {
   return (
     <>
-      <div
+      <Navbar
         className={clsx(
           "navbar fixed z-20 border-b",
           "border-b-base-200 bg-base-100"
@@ -24,15 +25,17 @@ export default function MasterLayout(): JSX.Element {
             <HiMenuAlt2 className="h-5 w-5" />
           </label>
         </div>
+
         <div className="flex-1">
           <Link className="ml-2 text-2xl font-bold" to="/">
             {import.meta.env.VITE_APP_NAME}
           </Link>
         </div>
+
         <div className="flex-none">
           <ThemeChanger />
 
-          <div className="dropdown-end dropdown">
+          <Dropdown vertical="end">
             <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
               <div className="w-10 rounded-full">
                 <img
@@ -42,11 +45,11 @@ export default function MasterLayout(): JSX.Element {
                 />
               </div>
             </label>
-            <ul
-              tabIndex={0}
+
+            <Dropdown.Menu
               className={clsx(
-                "dropdown-content menu rounded-box menu-compact",
-                "mt-3 w-52 bg-base-100 p-2 shadow"
+                "rounded-box menu-compact w-52",
+                "mt-3 bg-base-100 p-2 shadow"
               )}
             >
               <li>
@@ -55,16 +58,12 @@ export default function MasterLayout(): JSX.Element {
                   <span className="badge">New</span>
                 </a>
               </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
-          </div>
+              <Dropdown.Item>Settings</Dropdown.Item>
+              <Dropdown.Item>Logout</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
-      </div>
+      </Navbar>
 
       <SuspenseOutlet />
     </>
