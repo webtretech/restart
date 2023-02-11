@@ -1,9 +1,22 @@
-export default function Spinner(): JSX.Element {
+import { TailSpin } from "react-loader-spinner";
+
+interface SpinnerProps {
+  visible?: boolean;
+  wrapperClass?: string;
+}
+
+export default function Spinner(props: SpinnerProps): JSX.Element {
   return (
     <div className="flex h-screen">
-      <div className="m-auto">
-        <div className="btn-ghost loading btn bg-transparent"></div>
-      </div>
+      <TailSpin
+        radius="1"
+        width="50"
+        height="50"
+        visible={true}
+        ariaLabel="tail-spin-loader"
+        wrapperClass="mx-auto mt-[25vh]"
+        {...props}
+      />
     </div>
   );
 }
