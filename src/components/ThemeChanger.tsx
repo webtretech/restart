@@ -1,9 +1,9 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/redux";
 import { getDarkTheme } from "@/redux/app/appSelector";
 import { appActions } from "@/redux/app/appSlice";
-import clsx from "clsx";
 import { useEffect } from "react";
 import { Swap } from "react-daisyui";
+import { twMerge } from "tailwind-merge";
 import { themeChange } from "theme-change";
 
 export default function ThemeChanger({
@@ -23,7 +23,7 @@ export default function ThemeChanger({
     <Swap
       rotate
       active={darkTheme}
-      className={clsx("btn-ghost btn-circle btn", className)}
+      className={twMerge("btn-ghost btn-circle btn", className)}
       onElement={
         <svg
           className="h-5 w-5 fill-current"
