@@ -1,6 +1,5 @@
 export interface AppState {
   darkTheme: boolean;
-  counter: number;
 }
 
 export const AppInitialState = (): AppState => {
@@ -8,6 +7,5 @@ export const AppInitialState = (): AppState => {
 
   return {
     darkTheme: Boolean(theme && theme === "night"),
-    counter: 0,
   };
 };

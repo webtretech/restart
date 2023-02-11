@@ -1,6 +1,7 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/redux";
 import { counterActions } from "@/redux/counter/counterSlice";
 import { useCallback } from "react";
+import { Button, Card } from "react-daisyui";
 
 export default function Home(): JSX.Element {
   // Access the dispatcher & fully-typed state
@@ -23,23 +24,25 @@ export default function Home(): JSX.Element {
   return (
     <div className="flex h-screen">
       <div className="m-auto">
-        <div className="card w-96 bg-neutral text-neutral-content">
-          <div className="card-body items-center text-center">
-            <h2 className="card-title font-sans text-8xl">{counter}</h2>
+        <Card className="w-96 bg-neutral text-neutral-content">
+          <Card.Body className="items-center text-center">
+            <Card.Title tag="h2" className="font-sans text-8xl">
+              {counter}
+            </Card.Title>
             <p className="p-4 text-sm">
               An example state management using redux, check the console for
               action logs.
             </p>
-            <div className="card-actions justify-end">
-              <button className="btn-error btn" onClick={decreaseCounter}>
+            <Card.Actions className="justify-end">
+              <Button color="error" onClick={decreaseCounter}>
                 Decrease
-              </button>
-              <button className="btn-success btn" onClick={increaseCounter}>
+              </Button>
+              <Button color="success" onClick={increaseCounter}>
                 Increase
-              </button>
-            </div>
-          </div>
-        </div>
+              </Button>
+            </Card.Actions>
+          </Card.Body>
+        </Card>
       </div>
     </div>
   );
