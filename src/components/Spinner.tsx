@@ -2,7 +2,7 @@ import { TailSpin } from "react-loader-spinner";
 
 interface SpinnerProps {
   visible?: boolean;
-  wrapperClass?: string | undefined;
+  wrapperClass?: string;
 }
 
 export default function Spinner(props: SpinnerProps): JSX.Element {
