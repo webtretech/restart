@@ -1,22 +1,22 @@
-## Features (pre-configured)
+## Features (included)
 
-- ⚡️ [React](https://github.com/facebook/react/), [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), and [Vite](https://github.com/vitejs/vite)
-
-- 🗂 Routing via react-router [`v6`](./src/router) with lazy loading and protected routes support
+- ⚡️ [React 18](https://github.com/facebook/react/), [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), and [Vite](https://github.com/vitejs/vite)
 
 - 📑 [Layout System](./src/layouts) with multiple layout support
 
 - 💮 [State Management via Redux](./src/redux) - with hooks and logging for development
 
+- 🗂 Routing via react-router [`v6`](./src/router) with lazy loading and protected routes support
+
 - ⛔ Error handling with [`error-boundary`](https://github.com/bvaughn/react-error-boundary) - can also be used for logging to third-party services
 
 - 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) and [react-daisyui](https://github.com/daisyui/react-daisyui) - the most popular Tailwind CSS component library.
 
-- 📲 Theme System with `light` and `dark` mode support
+- 🗂 Absolute import — Import folders and files using the `@` prefix
+
+- 📲 Theme System with default `light` and `dark` mode
 
 - 😃 [Use icons from popular icon packs](https://github.com/react-icons/react-icons)
-
-- 🗂 Absolute import — Import folders and files using the `@` prefix
 
 - 📏 ESLint — Pluggable JavaScript linter
 
@@ -80,4 +80,4 @@ npm test
 
 ## License
 
-Copyright (c) 2022 <a href="https://github.com/webtretech/restart/blob/master/LICENSE" target="_blank">MIT</a>, <a href="https://github.com/webtretech" target="_blank">Webtre Technologies</a>
+[MIT](./LICENSE) License © 2022 [Webtre Technologies](https://github.com/webtretech)
