@@ -4,13 +4,15 @@
 
 - 📑 [Layout System](./src/layouts) with multiple layout support
 
-- 💮 [State Management via Redux](./src/redux) - with hooks and logging for development
+- 💮 [State Management via Redux](./src/redux) — with hooks and logging for development
 
-- 🗂 Routing via react-router [`v6`](./src/router) with lazy loading and protected routes support
+- 🔎 [ENV Validation](./src/env.ts) at runtime — never again run your app with missing environment variables
 
-- ⛔ Error handling with [`error-boundary`](https://github.com/bvaughn/react-error-boundary) - can also be used for logging to third-party services
+- 🔗 Routing via react-router [`v6`](./src/router) with lazy loading and protected routes support
 
-- 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) and [react-daisyui](https://github.com/daisyui/react-daisyui) - the most popular Tailwind CSS component library.
+- ⛔ Error handling with [`error-boundary`](https://github.com/bvaughn/react-error-boundary) — can also be used for logging to third-party services
+
+- 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) and [react-daisyui](https://github.com/daisyui/react-daisyui) — the most popular Tailwind CSS component library.
 
 - 🗂 Absolute import — Import folders and files using the `@` prefix
 
