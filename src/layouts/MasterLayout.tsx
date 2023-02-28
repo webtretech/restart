@@ -1,5 +1,6 @@
 import SuspenseOutlet from "@/components/SuspenseOutlet";
 import ThemeChanger from "@/components/ThemeChanger";
+import { env } from "@/env";
 import clsx from "clsx";
 import { Dropdown, Navbar } from "react-daisyui";
 import { HiMenuAlt2 } from "react-icons/hi";
@@ -28,7 +29,7 @@ export default function MasterLayout(): JSX.Element {
 
         <div className="flex-1">
           <Link className="ml-2 text-2xl font-bold" to="/">
-            {import.meta.env.VITE_APP_NAME}
+            {env.VITE_APP_NAME}
           </Link>
         </div>
 
