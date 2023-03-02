@@ -24,6 +24,8 @@
 
 - 💖 Prettier — Opinionated Code Formatter
 
+- 🚓 Commitlint — Lint commit messages
+
 - 🦾 Strongly Typed: written in [TypeScript](https://github.com/microsoft/TypeScript)
 
 ### Plugins
