@@ -2,8 +2,11 @@ import { useAppDispatch, useAppSelector } from "@/hooks/redux";
 import { counterActions } from "@/redux/counter/counterSlice";
 import { useCallback } from "react";
 import { Button, Card } from "react-daisyui";
+import { useTranslation } from "react-i18next";
 
 export default function Home(): JSX.Element {
+  const { t } = useTranslation();
+
   // Access the dispatcher & fully-typed state
   // from anywhere in the app using hooks
   const dispatch = useAppDispatch();
@@ -35,10 +38,10 @@ export default function Home(): JSX.Element {
             </p>
             <Card.Actions className="justify-end">
               <Button color="error" onClick={decreaseCounter}>
-                Decrease
+                {t("decrease")}
               </Button>
               <Button color="success" onClick={increaseCounter}>
-                Increase
+                {t("increase")}
               </Button>
             </Card.Actions>
           </Card.Body>
