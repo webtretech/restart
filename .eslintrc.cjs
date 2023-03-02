@@ -2,11 +2,8 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     sourceType: "module",
-    project: "tsconfig.json",
     ecmaVersion: "latest",
-    ecmaFeatures: {
-      jsx: true,
-    },
+    project: "tsconfig.json",
   },
   ignorePatterns: [
     ".eslintrc.cjs",
@@ -23,6 +20,7 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "standard-with-typescript",
     "prettier",
   ],
