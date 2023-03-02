@@ -2,6 +2,8 @@
 
 - ⚡️ [React 18](https://github.com/facebook/react/), [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), and [Vite](https://github.com/vitejs/vite)
 
+- 🌍 [I18n ready](./src/i18n) — includes internationalization
+
 - 📑 [Layout System](./src/layouts) — with multiple layout support
 
 - 💮 [State Management via Redux](./src/redux) — with hooks and logging for development
@@ -20,11 +22,11 @@
 
 - 😃 [Use icons from popular icon packs](https://github.com/react-icons/react-icons)
 
+- 🚓 Commitlint — Lint commit messages
+
 - 📏 ESLint — Pluggable JavaScript linter
 
 - 💖 Prettier — Opinionated Code Formatter
-
-- 🚓 Commitlint — Lint commit messages
 
 - 🦾 Strongly Typed: written in [TypeScript](https://github.com/microsoft/TypeScript)
 
