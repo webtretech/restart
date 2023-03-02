@@ -1,8 +1,8 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: "latest",
     sourceType: "module",
+    ecmaVersion: "latest",
     project: "tsconfig.json",
   },
   ignorePatterns: [
@@ -11,12 +11,24 @@ module.exports = {
     "postcss.config.cjs",
     "prettier.config.cjs",
     "tailwind.config.cjs",
+    "commitlint.config.cjs",
   ],
   env: {
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:react/recommended", "standard-with-typescript", "prettier"],
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "standard-with-typescript",
+    "prettier",
+  ],
   plugins: ["react", "prettier"],
   overrides: [],
   rules: {
