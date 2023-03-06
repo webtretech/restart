@@ -1,6 +1,10 @@
 /// <reference types="vite/client" />
-import { EnvironmentVariable } from "@/env";
+
+interface ImportMetaEnv {
+  readonly VITE_APP_NAME: string;
+  // more env variables...
+}
 
 interface ImportMeta {
-  readonly env: EnvironmentVariable;
+  readonly env: ImportMetaEnv;
 }
