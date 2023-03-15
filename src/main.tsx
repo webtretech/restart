@@ -5,7 +5,7 @@ import "@/style.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ErrorBoundary } from "react-error-boundary";
-import { Provider } from "react-redux";
+import { Provider as ReduxProvider } from "react-redux";
 
 // Global error handler
 const errorHandler = (error: Error, info: { componentStack: string }): void => {
@@ -22,9 +22,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ErrorBoundary FallbackComponent={ErrorFallback} onError={errorHandler}>
-      <Provider store={store}>
+      <ReduxProvider store={store}>
         <App />
-      </Provider>
+      </ReduxProvider>
     </ErrorBoundary>
   </React.StrictMode>
 );
