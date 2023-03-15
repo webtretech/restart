@@ -9,7 +9,12 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/typography"),
+    require("tailwindcss-children"),
+    require("daisyui"),
+  ],
   daisyui: {
     styled: true,
     themes: ["light", "night"],
