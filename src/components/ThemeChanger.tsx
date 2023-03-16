@@ -16,7 +16,6 @@ export default function ThemeChanger({
   const darkTheme = useAppSelector(getDarkTheme);
 
   useEffect(() => {
-    // theme-change: false parameter is required
     themeChange(false);
   }, []);
 
@@ -26,14 +25,14 @@ export default function ThemeChanger({
       active={darkTheme}
       className={twMerge("btn-ghost btn-circle btn", className)}
       onElement={
-        <MdOutlineDarkMode
+        <MdOutlineLightMode
           className="h-5 w-5"
           data-set-theme="night"
           onClick={() => dispatch(appActions.toggleDarkTheme())}
         />
       }
       offElement={
-        <MdOutlineLightMode
+        <MdOutlineDarkMode
           className="h-5 w-5"
           data-set-theme="light"
           onClick={() => dispatch(appActions.toggleDarkTheme())}
