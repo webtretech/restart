@@ -1,9 +1,10 @@
 import { RootState } from "@/store";
+import { AppState } from "./appState";
 
-export const getDarkTheme = (state: RootState): boolean => {
-  return state.app.darkTheme;
+export const getTheme = (state: RootState): AppState["theme"] => {
+  return state.app.theme;
 };
 
-export const getLanguage = (state: RootState): string => {
+export const getLanguage = (state: RootState): AppState["language"] => {
   return state.app.language;
 };
