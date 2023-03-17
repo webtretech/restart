@@ -4,10 +4,10 @@ export interface AppState {
 }
 
 export const AppInitialState = (): AppState => {
-  const theme = localStorage.getItem("theme") ?? "auto";
+  const theme = localStorage.getItem("theme");
 
   return {
     language: "en-US",
-    theme: theme as AppState["theme"],
+    theme: theme === "" ? "auto" : (theme as AppState["theme"]),
   };
 };

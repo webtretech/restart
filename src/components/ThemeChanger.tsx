@@ -11,6 +11,9 @@ import {
 } from "react-icons/md";
 import { themeChange } from "theme-change";
 
+// Set the corresponding theme names from "tailwind.config.cjs"
+const themeNames = { light: "light", dark: "dark" };
+
 export default function ThemeChanger({
   className,
 }: {
@@ -26,20 +29,22 @@ export default function ThemeChanger({
       case "dark":
         return <MdOutlineDarkMode className="h-5 w-5" />;
 
-      default: {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          const html = document.querySelector("html") as HTMLElement;
-          html.setAttribute("data-theme", "night");
-        }
-
+      default:
         return <MdOutlineBrightnessAuto className="h-5 w-5" />;
-      }
     }
   }, [theme]);
 
   useEffect(() => {
     themeChange(false);
-  }, []);
+
+    if (
+      theme === "auto" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      const html = document.querySelector("html") as HTMLElement;
+      html.setAttribute("data-theme", themeNames.dark); // set preferred dark theme
+    }
+  }, [theme]);
 
   return (
     <Dropdown vertical="end" className={className}>
@@ -59,7 +64,7 @@ export default function ThemeChanger({
         </Dropdown.Item>
 
         <Dropdown.Item
-          data-set-theme="night"
+          data-set-theme={themeNames.dark}
           className={clsx({ bordered: theme === "dark" })}
           onClick={() => dispatch(appActions.setTheme("dark"))}
         >
@@ -67,7 +72,7 @@ export default function ThemeChanger({
         </Dropdown.Item>
 
         <Dropdown.Item
-          data-set-theme="light"
+          data-set-theme={themeNames.light}
           className={clsx({ bordered: theme === "light" })}
           onClick={() => dispatch(appActions.setTheme("light"))}
         >
