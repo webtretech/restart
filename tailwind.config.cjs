@@ -17,12 +17,12 @@ module.exports = {
   ],
   daisyui: {
     styled: true,
-    themes: ["light", "night"],
     base: true,
     utils: true,
     logs: true,
     rtl: false,
     prefix: "",
-    darkTheme: "night",
+    darkTheme: "dark",
+    themes: ["light", "dark"],
   },
 };
