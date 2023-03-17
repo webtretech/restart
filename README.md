@@ -14,9 +14,9 @@
 
 - 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) and [react-daisyui](https://github.com/daisyui/react-daisyui) — the most popular Tailwind CSS component library.
 
-- 🗂 Absolute import — Import folders and files using the `@` prefix
+- 📲 Theme System — with default `light`, `dark`, and `auto detect` mode
 
-- 📲 Theme System — with default `light` and `dark` mode
+- 🗂 Absolute import — Import folders and files using the `@` prefix
 
 - 😃 [Use icons from popular icon packs](https://github.com/react-icons/react-icons)
 
