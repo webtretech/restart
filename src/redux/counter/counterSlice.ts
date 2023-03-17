@@ -1,10 +1,10 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-export interface AppState {
+export interface Counter {
   counter: number;
 }
 
-const initialState: AppState = {
+const initialState: Counter = {
   counter: 0,
 };
 
@@ -12,7 +12,7 @@ const appSlice = createSlice({
   name: "counter",
   initialState,
   reducers: {
-    setCounter: (state, action: PayloadAction<AppState["counter"]>) => {
+    setCounter: (state, action: PayloadAction<Counter["counter"]>) => {
       state.counter = action.payload;
     },
   },
