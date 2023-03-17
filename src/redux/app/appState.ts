@@ -1,6 +1,6 @@
 export interface AppState {
   language: string;
-  theme: "auto" | "dark" | "light"; // Change "night" and "light" to theme name from tailwind.config.js
+  theme: "auto" | "dark" | "light";
 }
 
 export const AppInitialState = (): AppState => {
