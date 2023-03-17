@@ -1,13 +1,13 @@
 export interface AppState {
   language: string;
-  darkTheme: boolean;
+  theme: "auto" | "dark" | "light"; // Change "night" and "light" to theme name from tailwind.config.js
 }
 
 export const AppInitialState = (): AppState => {
-  const theme = localStorage.getItem("theme");
+  const theme = localStorage.getItem("theme") ?? "auto";
 
   return {
     language: "en-US",
-    darkTheme: Boolean(theme && theme === "night"),
+    theme: theme as AppState["theme"],
   };
 };

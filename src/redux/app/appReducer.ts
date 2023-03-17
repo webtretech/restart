@@ -1,8 +1,11 @@
 import { AppState } from "@/redux/app/appState";
 import { CaseReducer, PayloadAction } from "@reduxjs/toolkit";
 
-export const toggleDarkTheme: CaseReducer<AppState> = (state) => {
-  state.darkTheme = !state.darkTheme;
+export const setTheme: CaseReducer<
+  AppState,
+  PayloadAction<AppState["theme"]>
+> = (state, action) => {
+  state.theme = action.payload;
 };
 
 export const setLanguage: CaseReducer<
