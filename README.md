@@ -14,7 +14,7 @@
 
 - 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) and [react-daisyui](https://github.com/daisyui/react-daisyui) — the most popular Tailwind CSS component library.
 
-- 📲 Theme System — with default `light`, `dark`, and `auto detect` mode
+- 📲 [Theme System](./src/components/ThemeChanger.tsx) — with default `light`, `dark`, and `auto detect` mode
 
 - 🗂 Absolute import — Import folders and files using the `@` prefix
 
