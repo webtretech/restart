@@ -33,7 +33,7 @@ export default function MasterLayout(): JSX.Element {
         </div>
 
         <div className="flex-none">
-          <ThemeChanger />
+          <ThemeChanger className="mr-2" />
 
           <Dropdown vertical="end">
             <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
@@ -46,12 +46,7 @@ export default function MasterLayout(): JSX.Element {
               </div>
             </label>
 
-            <Dropdown.Menu
-              className={clsx(
-                "rounded-box menu-compact w-52",
-                "mt-3 bg-base-100 p-2 shadow"
-              )}
-            >
+            <Dropdown.Menu className="menu-compact mt-3 w-52 p-2 shadow">
               <li>
                 <a className="justify-between">
                   Profile
