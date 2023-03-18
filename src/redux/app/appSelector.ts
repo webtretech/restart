@@ -1,5 +1,5 @@
 import { RootState } from "@/store";
-import { AppState } from "./appState";
+import { AppState } from "@/redux/app/appState";
 
 export const getTheme = (state: RootState): AppState["theme"] => {
   return state.app.theme;

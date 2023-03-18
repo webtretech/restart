@@ -12,7 +12,7 @@ import {
 import { themeChange } from "theme-change";
 
 // Set the corresponding theme names from "tailwind.config.cjs"
-const themeNames = { light: "light", dark: "dark" };
+const themes = { light: "light", dark: "dark" };
 
 export default function ThemeChanger({
   className,
@@ -23,10 +23,10 @@ export default function ThemeChanger({
   const theme = useAppSelector(getTheme);
   const themeIcon = useMemo(() => {
     switch (theme) {
-      case "light":
+      case themes.light:
         return <MdOutlineLightMode className="h-5 w-5" />;
 
-      case "dark":
+      case themes.dark:
         return <MdOutlineDarkMode className="h-5 w-5" />;
 
       default:
@@ -36,13 +36,10 @@ export default function ThemeChanger({
 
   useEffect(() => {
     themeChange(false);
-
-    if (
-      theme === "auto" &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
+    // Automatically set dark theme when auto detect is enabled
+    if (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches) {
       const html = document.querySelector("html") as HTMLElement;
-      html.setAttribute("data-theme", themeNames.dark); // set preferred dark theme
+      html.setAttribute("data-theme", themes.dark);
     }
   }, [theme]);
 
@@ -57,26 +54,34 @@ export default function ThemeChanger({
       <Dropdown.Menu className="menu-compact mt-3 w-32 p-2">
         <Dropdown.Item
           data-set-theme=""
-          className={clsx({ bordered: theme === "auto" })}
-          onClick={() => dispatch(appActions.setTheme("auto"))}
+          className={clsx({ bordered: !theme })}
+          onClick={() => dispatch(appActions.setTheme(""))}
         >
-          <MdOutlineBrightnessAuto className="h-5 w-5" /> Auto
+          <MdOutlineBrightnessAuto
+            className={clsx("h-5 w-5", { "-ml-1": !theme })}
+          />
+          Auto
         </Dropdown.Item>
 
         <Dropdown.Item
-          data-set-theme={themeNames.dark}
-          className={clsx({ bordered: theme === "dark" })}
-          onClick={() => dispatch(appActions.setTheme("dark"))}
+          data-set-theme={themes.dark}
+          className={clsx({ bordered: theme === themes.dark })}
+          onClick={() => dispatch(appActions.setTheme(themes.dark))}
         >
-          <MdOutlineDarkMode className="h-5 w-5" /> Dark
+          <MdOutlineDarkMode
+            className={clsx("h-5 w-5", { "-ml-1": theme === themes.dark })}
+          />
+          Dark
         </Dropdown.Item>
 
         <Dropdown.Item
-          data-set-theme={themeNames.light}
-          className={clsx({ bordered: theme === "light" })}
-          onClick={() => dispatch(appActions.setTheme("light"))}
+          data-set-theme={themes.light}
+          className={clsx({ bordered: theme === themes.light })}
+          onClick={() => dispatch(appActions.setTheme(themes.light))}
         >
-          <MdOutlineLightMode className="h-5 w-5" />
+          <MdOutlineLightMode
+            className={clsx("h-5 w-5", { "-ml-1": theme === themes.light })}
+          />
           Light
         </Dropdown.Item>
       </Dropdown.Menu>
