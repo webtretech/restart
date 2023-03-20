@@ -9,6 +9,7 @@ import {
   MdOutlineDarkMode,
   MdOutlineLightMode,
 } from "react-icons/md";
+import { useMedia } from "react-use";
 import { themeChange } from "theme-change";
 
 // Set the corresponding theme names from "tailwind.config.cjs"
@@ -34,14 +35,19 @@ export default function ThemeChanger({
     }
   }, [theme]);
 
+  const isDeviceThemeDark = useMedia("(prefers-color-scheme: dark)", false);
+
   useEffect(() => {
     themeChange(false);
-    // Automatically set dark theme when auto detect is enabled
-    if (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      const html = document.querySelector("html") as HTMLElement;
-      html.setAttribute("data-theme", themes.dark);
+    // Automatically set theme if non is explicitly set
+    if (!theme) {
+      const htmlElement = document.querySelector("html") as HTMLElement;
+
+      if (isDeviceThemeDark) {
+        htmlElement.setAttribute("data-theme", themes.dark);
+      } else htmlElement.setAttribute("data-theme", themes.light);
     }
-  }, [theme]);
+  }, [theme, isDeviceThemeDark]);
 
   return (
     <Dropdown vertical="end" className={className}>
