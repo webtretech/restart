@@ -1,4 +1,8 @@
+import { useErrorBoundary } from "react-error-boundary";
+
 export default function ErrorFallback(): JSX.Element {
+  const { resetBoundary } = useErrorBoundary();
+
   return (
     <div className="flex h-screen">
       <div className="m-auto text-center">
@@ -8,9 +12,12 @@ export default function ErrorFallback(): JSX.Element {
         </p>
         <p className="pb-4 text-xs">Reason: The request timed out.</p>
 
-        <a href="/" className="btn-primary btn-md btn normal-case">
-          Return to home page
-        </a>
+        <button
+          className="btn-primary btn-md btn normal-case"
+          onClick={resetBoundary}
+        >
+          Try again
+        </button>
       </div>
     </div>
   );
