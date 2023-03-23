@@ -1,6 +1,6 @@
 import appSlice from "@/redux/app/appSlice";
 import counterSlice from "@/redux/counter/counterSlice";
-import { Middleware, configureStore } from "@reduxjs/toolkit";
+import { type Middleware, configureStore } from "@reduxjs/toolkit";
 import logger from "redux-logger";
 
 // Global middleware
