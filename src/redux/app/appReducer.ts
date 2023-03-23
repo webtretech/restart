@@ -1,5 +1,5 @@
-import { AppState } from "@/redux/app/appState";
-import { CaseReducer, PayloadAction } from "@reduxjs/toolkit";
+import { type AppState } from "@/redux/app/appState";
+import { type CaseReducer, type PayloadAction } from "@reduxjs/toolkit";
 
 export const setTheme: CaseReducer<
   AppState,
