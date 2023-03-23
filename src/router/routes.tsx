@@ -1,5 +1,5 @@
 import MasterLayout from "@/layouts/MasterLayout";
-import { AppRouteObject } from "@/router/interface";
+import { type AppRouteObject } from "@/router/interface";
 import Page404 from "@/pages/Status/Page404";
 import { lazy } from "react";
 
