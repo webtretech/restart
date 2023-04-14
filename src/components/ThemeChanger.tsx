@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from "@/hooks/redux";
 import { getTheme } from "@/redux/app/appSelector";
 import { appActions } from "@/redux/app/appSlice";
 import clsx from "clsx";
-import { useEffect, useMemo } from "react";
+import { useCallback, useEffect } from "react";
 import { Button, Dropdown } from "react-daisyui";
 import {
   MdOutlineBrightnessAuto,
@@ -22,7 +22,7 @@ export default function ThemeChanger({
 }): JSX.Element {
   const dispatch = useAppDispatch();
   const theme = useAppSelector(getTheme);
-  const themeIcon = useMemo(() => {
+  const themeIcon = useCallback(() => {
     switch (theme) {
       case themes.light:
         return <MdOutlineLightMode className="h-5 w-5" />;
@@ -53,7 +53,7 @@ export default function ThemeChanger({
     <Dropdown vertical="end" className={className}>
       <Dropdown.Toggle button={false}>
         <Button shape="circle" color="ghost">
-          {themeIcon}
+          {themeIcon()}
         </Button>
       </Dropdown.Toggle>
 
