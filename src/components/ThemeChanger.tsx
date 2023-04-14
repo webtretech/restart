@@ -12,7 +12,7 @@ import {
 import { useMedia } from "react-use";
 import { themeChange } from "theme-change";
 
-// Set the corresponding theme names from "tailwind.config.cjs"
+// Set the corresponding daisyUI themes from "tailwind.config.cjs"
 const themes = { light: "light", dark: "dark" };
 
 export default function ThemeChanger({
@@ -22,6 +22,8 @@ export default function ThemeChanger({
 }): JSX.Element {
   const dispatch = useAppDispatch();
   const theme = useAppSelector(getTheme);
+  const isDeviceThemeDark = useMedia("(prefers-color-scheme: dark)", false);
+
   const themeIcon = useCallback(() => {
     switch (theme) {
       case themes.light:
@@ -34,8 +36,6 @@ export default function ThemeChanger({
         return <MdOutlineBrightnessAuto className="h-5 w-5" />;
     }
   }, [theme]);
-
-  const isDeviceThemeDark = useMedia("(prefers-color-scheme: dark)", false);
 
   useEffect(() => {
     themeChange(false);
