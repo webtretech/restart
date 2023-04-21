@@ -1,12 +1,12 @@
-import enUS from "@/i18n/en/core.json";
+import enUS from "@/i18n/enUS/core.json";
+import de from "@/i18n/de/core.json";
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
 export const resources = {
-  "en-US": {
-    translation: enUS,
-  },
+  "en-US": { translation: enUS },
+  de: { translation: de },
 } as const;
 
 export const languageKeys = Object.keys(resources);
