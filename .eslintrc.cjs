@@ -11,6 +11,7 @@ module.exports = {
     "postcss.config.cjs",
     "prettier.config.cjs",
     "tailwind.config.cjs",
+    "transmart.config.cjs",
     "commitlint.config.cjs",
   ],
   env: {
