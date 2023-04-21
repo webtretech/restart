@@ -5,7 +5,7 @@ export interface AppState {
 
 export const AppInitialState = (): AppState => {
   return {
-    language: "en-US",
+    language: localStorage.getItem("i18nextLng") ?? "en-US",
     theme: localStorage.getItem("theme") ?? "",
   };
 };

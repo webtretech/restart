@@ -1,3 +1,4 @@
+import LanguageChanger from "@/components/LanguageChanger";
 import SuspenseOutlet from "@/components/SuspenseOutlet";
 import ThemeChanger from "@/components/ThemeChanger";
 import clsx from "clsx";
@@ -33,6 +34,8 @@ export default function MasterLayout(): JSX.Element {
         </div>
 
         <div className="flex-none">
+          <LanguageChanger className="mr-2" />
+
           <ThemeChanger className="mr-2" />
 
           <Dropdown vertical="end">
