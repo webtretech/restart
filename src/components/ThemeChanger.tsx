@@ -60,34 +60,28 @@ export default function ThemeChanger({
       <Dropdown.Menu className="menu-compact mt-3 w-32 p-2">
         <Dropdown.Item
           data-set-theme=""
-          className={clsx({ bordered: !theme })}
+          className={clsx({ "bordered -ml-1": !theme })}
           onClick={() => dispatch(appActions.setTheme(""))}
         >
-          <MdOutlineBrightnessAuto
-            className={clsx("h-5 w-5", { "-ml-1": !theme })}
-          />
+          <MdOutlineBrightnessAuto className="h-5 w-5" />
           Auto
         </Dropdown.Item>
 
         <Dropdown.Item
           data-set-theme={themes.dark}
-          className={clsx({ bordered: theme === themes.dark })}
+          className={clsx({ "bordered -ml-1": theme === themes.dark })}
           onClick={() => dispatch(appActions.setTheme(themes.dark))}
         >
-          <MdOutlineDarkMode
-            className={clsx("h-5 w-5", { "-ml-1": theme === themes.dark })}
-          />
+          <MdOutlineDarkMode className="h-5 w-5" />
           Dark
         </Dropdown.Item>
 
         <Dropdown.Item
           data-set-theme={themes.light}
-          className={clsx({ bordered: theme === themes.light })}
+          className={clsx({ "bordered -ml-1": theme === themes.light })}
           onClick={() => dispatch(appActions.setTheme(themes.light))}
         >
-          <MdOutlineLightMode
-            className={clsx("h-5 w-5", { "-ml-1": theme === themes.light })}
-          />
+          <MdOutlineLightMode className="h-5 w-5" />
           Light
         </Dropdown.Item>
       </Dropdown.Menu>
