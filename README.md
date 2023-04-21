@@ -18,6 +18,8 @@
 
 - 🗂 Absolute import — Import folders and files using the `@` prefix
 
+- 🤖 [Transmart](./transmart.config.cjs) — Translate your I18n language files with AI
+
 - 😃 [Use icons from popular icon packs](https://github.com/react-icons/react-icons)
 
 - 🚓 Commitlint — Lint commit messages
