@@ -27,7 +27,7 @@ export default function MasterLayout(): JSX.Element {
           </label>
         </div>
 
-        <div className="flex-1">
+        <div className="grow">
           <Link className="ml-2 text-2xl font-bold" to="/">
             {import.meta.env.VITE_APP_NAME}
           </Link>
