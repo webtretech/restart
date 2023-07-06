@@ -33,8 +33,8 @@ export default function Home(): JSX.Element {
               {counter}
             </Card.Title>
             <p className="p-4 text-sm">
-              An example state management using redux, check the console for
-              action logs.
+              An example state management using redux toolkit, check the console
+              for action logs.
             </p>
             <Card.Actions className="justify-end">
               <Button color="error" onClick={decreaseCounter}>

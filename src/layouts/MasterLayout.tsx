@@ -42,7 +42,7 @@ export default function MasterLayout(): JSX.Element {
             <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
               <div className="w-10 rounded-full">
                 <img
-                  src="https://placeimg.com/40/40/people"
+                  src="https://avatars.githubusercontent.com/u/21959017?s=400&u=1c2711bcd2713d682bf553835a6dce998c6fd49b&v=4"
                   loading="lazy"
                   alt="Profile"
                 />
