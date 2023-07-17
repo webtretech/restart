@@ -34,9 +34,9 @@ export default function MasterLayout(): JSX.Element {
         </div>
 
         <div className="flex-none">
-          <LanguageChanger className="mr-2" />
+          <LanguageChanger className="mr-1" />
 
-          <ThemeChanger className="mr-2" />
+          <ThemeChanger className="mr-1" />
 
           <Dropdown vertical="end">
             <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
