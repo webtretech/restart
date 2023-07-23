@@ -2,8 +2,8 @@ import App from "@/App";
 import ErrorFallback from "@/components/ErrorFallback";
 import store from "@/store";
 import "@/style.css";
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { ErrorBoundary } from "react-error-boundary";
 import { Provider as ReduxProvider } from "react-redux";
 
@@ -14,17 +14,15 @@ const errorHandler = (error: Error, info: { componentStack: string }): void => {
 };
 
 // Create app
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = createRoot(document.getElementById("root")!);
 
 // Render the app
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <ErrorBoundary FallbackComponent={ErrorFallback} onError={errorHandler}>
       <ReduxProvider store={store}>
         <App />
       </ReduxProvider>
     </ErrorBoundary>
-  </React.StrictMode>
+  </StrictMode>
 );
