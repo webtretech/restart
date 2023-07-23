@@ -1,9 +1,9 @@
+import { useAppSelector } from "@/hooks/redux";
+import i18n from "@/i18n";
+import { getLanguage } from "@/redux/app/appSelector";
 import router from "@/router";
 import { useEffect } from "react";
 import { RouterProvider } from "react-router-dom";
-import i18n from "@/i18n";
-import { useAppSelector } from "@/hooks/redux";
-import { getLanguage } from "@/redux/app/appSelector";
 
 export default function App(): JSX.Element {
   const language = useAppSelector(getLanguage);

@@ -14,23 +14,23 @@ export default function LanguageChanger({
   const language = useAppSelector(getLanguage);
 
   return (
-    <Dropdown vertical="end" className={className}>
+    <Dropdown end className={className}>
       <Dropdown.Toggle button={false}>
-        <Button shape="circle" color="ghost" className="w-16">
+        <Button shape="circle" color="ghost" className="w-[4.6rem]">
           <MdOutlineLanguage className="h-5 w-5" />
-          &nbsp;{language.slice(0, 2).toUpperCase()}
+          {language.slice(0, 2).toUpperCase()}
         </Button>
       </Dropdown.Toggle>
 
-      <Dropdown.Menu className="menu-compact mt-3 w-36 p-2">
+      <Dropdown.Menu className="menu-compact mt-3 w-36">
         <Dropdown.Item
-          className={clsx({ "bordered -ml-1": language.includes("en") })}
+          className={clsx({ active: language.includes("en") })}
           onClick={() => dispatch(appActions.setLanguage("en-US"))}
         >
           English (US)
         </Dropdown.Item>
         <Dropdown.Item
-          className={clsx({ "bordered -ml-1": language.includes("de") })}
+          className={clsx({ active: language.includes("de") })}
           onClick={() => dispatch(appActions.setLanguage("de"))}
         >
           German

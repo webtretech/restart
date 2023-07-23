@@ -1,5 +1,5 @@
-import enUS from "@/i18n/enUS/core.json";
 import de from "@/i18n/de/core.json";
+import enUS from "@/i18n/enUS/core.json";
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
