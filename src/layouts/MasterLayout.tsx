@@ -1,30 +1,24 @@
 import LanguageChanger from "@/components/LanguageChanger";
 import SuspenseOutlet from "@/components/SuspenseOutlet";
 import ThemeChanger from "@/components/ThemeChanger";
-import clsx from "clsx";
-import { Dropdown, Navbar } from "react-daisyui";
+import { Button, Dropdown, Navbar } from "react-daisyui";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { twMerge } from "tailwind-merge";
 
 export default function MasterLayout(): JSX.Element {
   return (
     <>
       <Navbar
-        className={clsx(
-          "navbar fixed z-20 border-b",
-          "border-b-base-200 bg-base-100"
+        className={twMerge(
+          "fixed z-20 bg-base-100",
+          "border-b border-b-base-200"
         )}
       >
         <div className="flex-none">
-          <label
-            htmlFor="side-navbar-drawer-left"
-            className={clsx(
-              "btn-primary btn-circle btn",
-              "btn-ghost drawer-button"
-            )}
-          >
+          <Button shape="circle" color="ghost">
             <HiMenuAlt2 className="h-5 w-5" />
-          </label>
+          </Button>
         </div>
 
         <div className="grow">
@@ -38,24 +32,24 @@ export default function MasterLayout(): JSX.Element {
 
           <ThemeChanger className="mr-1" />
 
-          <Dropdown vertical="end">
-            <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
-              <div className="w-10 rounded-full">
-                <img
-                  src="https://avatars.githubusercontent.com/u/21959017?s=400&u=1c2711bcd2713d682bf553835a6dce998c6fd49b&v=4"
-                  loading="lazy"
-                  alt="Profile"
-                />
-              </div>
-            </label>
+          <Dropdown end className="pr-3">
+            <Dropdown.Toggle button={false}>
+              <Button color="ghost" shape="circle" className="avatar">
+                <div className="w-10 rounded-full">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/21959017?s=400&u=1c2711bcd2713d682bf553835a6dce998c6fd49b&v=4"
+                    loading="lazy"
+                    alt="Profile"
+                  />
+                </div>
+              </Button>
+            </Dropdown.Toggle>
 
-            <Dropdown.Menu className="menu-compact mt-3 w-52 p-2 shadow">
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
+            <Dropdown.Menu className="menu-compact mt-3 w-52">
+              <Dropdown.Item className="justify-between">
+                Profile
+                <span className="badge">New</span>
+              </Dropdown.Item>
               <Dropdown.Item>Settings</Dropdown.Item>
               <Dropdown.Item>Logout</Dropdown.Item>
             </Dropdown.Menu>
