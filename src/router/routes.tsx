@@ -1,6 +1,6 @@
 import MasterLayout from "@/layouts/MasterLayout";
-import { type AppRouteObject } from "@/router/interface";
 import Page404 from "@/pages/Status/Page404";
+import { type AppRouteObject } from "@/router/interface";
 import { lazy } from "react";
 
 // Lazy load the routes to improve performance

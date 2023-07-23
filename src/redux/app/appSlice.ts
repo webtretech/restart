@@ -1,4 +1,4 @@
-import { setTheme, setLanguage } from "@/redux/app/appReducer";
+import { setLanguage, setTheme } from "@/redux/app/appReducer";
 import { AppInitialState } from "@/redux/app/appState";
 import { createSlice } from "@reduxjs/toolkit";
 
