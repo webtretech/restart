@@ -1,23 +1,24 @@
-const defaultConfig = require('@commitlint/config-conventional');
+const defaultConfig = require("@commitlint/config-conventional");
 
 module.exports = {
-  extends: ['@commitlint/config-conventional'],
+  extends: ["@commitlint/config-conventional"],
   rules: {
     ...defaultConfig.rules,
-    'type-enum': [
+    "type-enum": [
       2,
-      'always',
+      "always",
       [
-        'fix',
-        'test',
-        'tooling',
-        'refactor',
-        'revert',
-        'example',
-        'docs',
-        'format',
-        'feat',
-        'chore',
+        "fix",
+        "docs",
+        "test",
+        "feat",
+        "style",
+        "chore",
+        "revert",
+        "format",
+        "example",
+        "tooling",
+        "refactor",
       ],
     ],
   },
