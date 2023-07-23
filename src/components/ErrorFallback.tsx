@@ -1,3 +1,4 @@
+import { Button } from "react-daisyui";
 import { useErrorBoundary } from "react-error-boundary";
 
 export default function ErrorFallback(): JSX.Element {
@@ -12,12 +13,14 @@ export default function ErrorFallback(): JSX.Element {
         </p>
         <p className="pb-4 text-xs">Reason: The request timed out.</p>
 
-        <button
-          className="btn-primary btn-md btn normal-case"
+        <Button
           onClick={resetBoundary}
+          className="normal-case"
+          color="primary"
+          size="md"
         >
           Try again
-        </button>
+        </Button>
       </div>
     </div>
   );
