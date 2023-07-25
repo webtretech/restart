@@ -3,7 +3,7 @@ import { getLanguage } from "@/redux/app/appSelector";
 import { appActions } from "@/redux/app/appSlice";
 import clsx from "clsx";
 import { Button, Dropdown } from "react-daisyui";
-import { MdOutlineLanguage } from "react-icons/md";
+import { LuLanguages } from "react-icons/lu";
 
 export default function LanguageChanger({
   className,
@@ -17,7 +17,7 @@ export default function LanguageChanger({
     <Dropdown end className={className}>
       <Dropdown.Toggle button={false}>
         <Button shape="circle" color="ghost" className="w-[4.6rem]">
-          <MdOutlineLanguage className="h-5 w-5" />
+          <LuLanguages className="h-5 w-5" />
           {language.slice(0, 2).toUpperCase()}
         </Button>
       </Dropdown.Toggle>
