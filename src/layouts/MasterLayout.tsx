@@ -15,19 +15,17 @@ export default function MasterLayout(): JSX.Element {
           "border-b border-b-base-200"
         )}
       >
-        <div className="flex-none">
+        <Navbar.Start>
           <Button shape="circle" color="ghost">
             <HiMenuAlt2 className="h-5 w-5" />
           </Button>
-        </div>
 
-        <div className="grow">
           <Link className="ml-2 text-2xl font-bold" to="/">
             {import.meta.env.VITE_APP_NAME}
           </Link>
-        </div>
+        </Navbar.Start>
 
-        <div className="flex-none">
+        <Navbar.End>
           <LanguageChanger className="mr-1" />
 
           <ThemeChanger className="mr-1" />
@@ -54,7 +52,7 @@ export default function MasterLayout(): JSX.Element {
               <Dropdown.Item>Logout</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-        </div>
+        </Navbar.End>
       </Navbar>
 
       <SuspenseOutlet />
