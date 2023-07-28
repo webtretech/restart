@@ -22,7 +22,7 @@ export default function LanguageChanger({
         </Button>
       </Dropdown.Toggle>
 
-      <Dropdown.Menu className="menu-compact mt-3 w-36">
+      <Dropdown.Menu className="mt-3 w-36">
         <Dropdown.Item
           className={clsx({ active: language.includes("en") })}
           onClick={() => dispatch(appActions.setLanguage("en-US"))}
