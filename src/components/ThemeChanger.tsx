@@ -22,7 +22,6 @@ export default function ThemeChanger({
 }): JSX.Element {
   const dispatch = useAppDispatch();
   const theme = useAppSelector(getTheme);
-  const deviceThemeDark = useMedia("(prefers-color-scheme: dark)", false);
 
   const themeIcon = useCallback(() => {
     switch (theme) {
@@ -37,17 +36,16 @@ export default function ThemeChanger({
     }
   }, [theme]);
 
+  const deviceThemeDark = useMedia("(prefers-color-scheme: dark)", false);
+  // Automatically set theme if non is explicitly set
+  if (!theme && deviceThemeDark) {
+    const htmlElement = document.querySelector("html")!;
+    htmlElement.setAttribute("data-theme", themes.dark);
+  }
+
   useEffect(() => {
     themeChange(false);
-    // Automatically set theme if non is explicitly set
-    if (!theme) {
-      const htmlElement = document.querySelector("html")!;
-
-      if (deviceThemeDark) {
-        htmlElement.setAttribute("data-theme", themes.dark);
-      } else htmlElement.setAttribute("data-theme", themes.light);
-    }
-  }, [theme, deviceThemeDark]);
+  }, []);
 
   return (
     <Dropdown end className={className}>
@@ -57,7 +55,7 @@ export default function ThemeChanger({
         </Button>
       </Dropdown.Toggle>
 
-      <Dropdown.Menu className="menu-compact mt-3 w-32">
+      <Dropdown.Menu className="mt-3 w-36">
         <Dropdown.Item
           data-set-theme=""
           className={clsx({ active: !theme })}
