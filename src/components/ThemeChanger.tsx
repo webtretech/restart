@@ -22,6 +22,19 @@ export default function ThemeChanger({
 }): JSX.Element {
   const dispatch = useAppDispatch();
   const theme = useAppSelector(getTheme);
+  const deviceThemeDark = useMedia("(prefers-color-scheme: dark)", false);
+
+  // Automatically set theme if non is explicitly set
+  if (!theme) {
+    const htmlElement = document.querySelector("html")!;
+    if (deviceThemeDark) {
+      htmlElement.setAttribute("data-theme", themes.dark);
+    } else htmlElement.setAttribute("data-theme", themes.light);
+  }
+
+  useEffect(() => {
+    themeChange(false);
+  }, []);
 
   const themeIcon = useCallback(() => {
     switch (theme) {
@@ -35,17 +48,6 @@ export default function ThemeChanger({
         return <MdOutlineBrightnessAuto className="h-5 w-5" />;
     }
   }, [theme]);
-
-  const deviceThemeDark = useMedia("(prefers-color-scheme: dark)", false);
-  // Automatically set theme if non is explicitly set
-  if (!theme && deviceThemeDark) {
-    const htmlElement = document.querySelector("html")!;
-    htmlElement.setAttribute("data-theme", themes.dark);
-  }
-
-  useEffect(() => {
-    themeChange(false);
-  }, []);
 
   return (
     <Dropdown end className={className}>
