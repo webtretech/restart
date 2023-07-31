@@ -27,9 +27,10 @@ export default function ThemeChanger({
   // Automatically set theme if non is explicitly set
   if (!theme) {
     const htmlElement = document.querySelector("html")!;
-    if (deviceThemeDark) {
-      htmlElement.setAttribute("data-theme", themes.dark);
-    } else htmlElement.setAttribute("data-theme", themes.light);
+    htmlElement.setAttribute(
+      "data-theme",
+      deviceThemeDark ? themes.dark : themes.light
+    );
   }
 
   useEffect(() => {
