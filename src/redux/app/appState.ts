@@ -1,6 +1,6 @@
 export interface AppState {
-  theme: string;
   language: string;
+  theme: string;
 }
 
 export const AppInitialState = (): AppState => {

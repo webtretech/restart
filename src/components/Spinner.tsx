@@ -1,21 +1,30 @@
-import { TailSpin } from "react-loader-spinner";
+import { TailSpin, TailSpinProps } from "@/components/TailSpin";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-interface SpinnerProps {
-  visible?: boolean;
-  wrapperClass?: string;
-}
+type Props = Omit<TailSpinProps, "color" | "wrapperStyle"> & {
+  fullScreen?: boolean;
+};
 
-export default function Spinner(props: SpinnerProps): JSX.Element {
+export default function Spinner({
+  fullScreen = true,
+  wrapperClass,
+  ...props
+}: Props) {
   return (
-    <div className="flex h-screen">
+    <div
+      className={twMerge(
+        clsx("flex w-full", { "my-2.5": !fullScreen }),
+        wrapperClass,
+      )}
+    >
       <TailSpin
-        radius="1"
-        width="50"
-        height="50"
-        visible={true}
-        ariaLabel="tail-spin-loader"
-        wrapperClass="mx-auto mt-[25vh]"
+        height={50}
+        width={50}
         {...props}
+        ariaLabel="tail-spin-loader"
+        radius="1"
+        wrapperClass={clsx("mx-auto", { "mt-[25vh]": fullScreen })}
       />
     </div>
   );

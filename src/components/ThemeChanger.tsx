@@ -13,7 +13,7 @@ import { useMedia } from "react-use";
 import { themeChange } from "theme-change";
 
 // Set the corresponding daisyUI themes from "tailwind.config.cjs"
-const themes = { light: "light", dark: "dark" };
+const themes = { dark: "dark", light: "light" };
 
 export default function ThemeChanger({
   className,
@@ -29,7 +29,7 @@ export default function ThemeChanger({
     const htmlElement = document.querySelector("html")!;
     htmlElement.setAttribute(
       "data-theme",
-      deviceThemeDark ? themes.dark : themes.light
+      deviceThemeDark ? themes.dark : themes.light,
     );
   }
 
@@ -39,11 +39,11 @@ export default function ThemeChanger({
 
   const themeIcon = useCallback(() => {
     switch (theme) {
-      case themes.light:
-        return <MdOutlineLightMode className="h-5 w-5" />;
-
       case themes.dark:
         return <MdOutlineDarkMode className="h-5 w-5" />;
+
+      case themes.light:
+        return <MdOutlineLightMode className="h-5 w-5" />;
 
       default:
         return <MdOutlineBrightnessAuto className="h-5 w-5" />;
@@ -51,17 +51,17 @@ export default function ThemeChanger({
   }, [theme]);
 
   return (
-    <Dropdown end className={className}>
+    <Dropdown className={className} end>
       <Dropdown.Toggle button={false}>
-        <Button shape="circle" color="ghost">
+        <Button color="ghost" shape="circle">
           {themeIcon()}
         </Button>
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="mt-3 w-36">
         <Dropdown.Item
-          data-set-theme=""
           className={clsx({ active: !theme })}
+          data-set-theme=""
           onClick={() => dispatch(appActions.setTheme(""))}
         >
           <MdOutlineBrightnessAuto className="h-5 w-5" />
@@ -69,8 +69,8 @@ export default function ThemeChanger({
         </Dropdown.Item>
 
         <Dropdown.Item
-          data-set-theme={themes.dark}
           className={clsx({ active: theme === themes.dark })}
+          data-set-theme={themes.dark}
           onClick={() => dispatch(appActions.setTheme(themes.dark))}
         >
           <MdOutlineDarkMode className="h-5 w-5" />
@@ -78,8 +78,8 @@ export default function ThemeChanger({
         </Dropdown.Item>
 
         <Dropdown.Item
-          data-set-theme={themes.light}
           className={clsx({ active: theme === themes.light })}
+          data-set-theme={themes.light}
           onClick={() => dispatch(appActions.setTheme(themes.light))}
         >
           <MdOutlineLightMode className="h-5 w-5" />

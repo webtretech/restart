@@ -1,6 +1,6 @@
 ## Features (included)
 
-- ⚡️ [React 18](https://github.com/facebook/react/), [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), and [Vite](https://github.com/vitejs/vite)
+- ⚡️ [React 19](https://github.com/facebook/react/), [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), and [Vite](https://github.com/vitejs/vite)
 
 - 🌍 [I18n ready](./src/i18n) — includes internationalization
 
@@ -10,9 +10,9 @@
 
 - 🔗 Routing via [`react-router`](./src/router) — with lazy loading and protected routes support
 
-- ⛔ Error handling with [`error-boundary`](https://github.com/bvaughn/react-error-boundary) — can also be used for logging to third-party services
+- ⛔ Error handling with [`error-boundary`](./src/components/ErrorBoundary.tsx) — can also be used for logging to third-party services
 
-- 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) and [react-daisyui](https://github.com/daisyui/react-daisyui) — the most popular Tailwind CSS component library.
+- 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) and [react-daisyui](https://github.com/daisyui/react-daisyui) — the most popular Tailwind CSS component library
 
 - 📲 [Theme System](./src/components/ThemeChanger.tsx) — with default `light`, `dark`, and `auto detect` mode
 
@@ -32,7 +32,15 @@
 
 ### Plugins
 
-- [`vite-plugin-ejs`](https://github.com/trapcodeio/vite-plugin-ejs) - use ejs in your HTML
+- [`react-swc`](https://github.com/vitejs/vite-plugin-react-swc) - speed up your dev server with SWC
+
+- [`basic-ssl`](https://github.com/vitejs/vite-plugin-basic-ssl) - basic https in dev mode using an automatically generated self-signed certificate
+
+- [`svgr`](https://github.com/pd4d10/vite-plugin-svgr) - transform SVGs into React components
+
+- [`checker`](https://github.com/fi3ework/vite-plugin-checker) - provide checks of TypeScript, ESLint, Stylelint and more
+
+- [`visualizer`](https://github.com/btd/rollup-plugin-visualizer) - visualize and analyze your bundle to see which modules are taking up space.
 
 ## Checklist
 

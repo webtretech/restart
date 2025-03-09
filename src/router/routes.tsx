@@ -8,18 +8,18 @@ const Home = lazy(() => import("@/pages/Home"));
 
 const routes: AppRouteObject[] = [
   {
-    path: "/",
-    element: <MasterLayout />,
     children: [
       {
-        index: true,
         element: <Home />,
+        index: true,
       },
     ],
+    element: <MasterLayout />,
+    path: "/",
   },
   {
-    path: "/*",
     element: <Page404 />,
+    path: "/*",
   },
 ];
 

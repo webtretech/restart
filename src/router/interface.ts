@@ -1,11 +1,6 @@
-import { type RouteObject } from "react-router-dom";
+import { type RouteObject } from "react-router";
 
 export type AppRouteObject = RouteObject & {
-  /**
-   * @description routes that need login
-   */
-  isProtected?: boolean;
-
   /**
    * @description child route
    */

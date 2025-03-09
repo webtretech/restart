@@ -5,8 +5,8 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
 export const resources = {
-  "en-US": { translation: enUS },
   de: { translation: de },
+  "en-US": { translation: enUS },
 } as const;
 
 export const languageKeys = Object.keys(resources);
@@ -32,17 +32,17 @@ void i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    returnNull: false,
+    debug: false,
+    detection: {},
     fallbackLng: (code) => {
       const language = formatLanguage(code);
       return [language, "en-US"];
     },
-    debug: false,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
     resources,
-    detection: {},
+    returnNull: false,
   });
 
 export default i18n;

@@ -3,9 +3,9 @@ import { AppInitialState } from "@/redux/app/appState";
 import { createSlice } from "@reduxjs/toolkit";
 
 const appSlice = createSlice({
-  name: "app",
   initialState: AppInitialState,
-  reducers: { setTheme, setLanguage },
+  name: "app",
+  reducers: { setLanguage, setTheme },
 });
 
 export const appActions = appSlice.actions;

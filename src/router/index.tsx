@@ -1,16 +1,16 @@
+import ErrorBoundary from "@/components/ErrorBoundary";
+import Spinner from "@/components/Spinner";
 import { type AppRouteObject } from "@/router/interface";
 import routes from "@/router/routes";
-import { type RouteObject, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, type RouteObject } from "react-router";
 
 const wrappedRouter = (routes: AppRouteObject[]): RouteObject[] => {
   return routes.map((route: AppRouteObject) => {
-    const { element, children, isProtected, ...rest } = route;
-    const newRoute: RouteObject = { ...rest };
+    const { children, element, ...otherRouteProps } = route;
 
-    if (isProtected) {
-      // Check for protected routes
-      // and handle auth / redirection
-    }
+    const newRoute: RouteObject = { ...otherRouteProps };
+    newRoute.errorElement = <ErrorBoundary />;
+    newRoute.hydrateFallbackElement = <Spinner />;
 
     newRoute.element = element;
 

@@ -3,7 +3,7 @@ import SuspenseOutlet from "@/components/SuspenseOutlet";
 import ThemeChanger from "@/components/ThemeChanger";
 import { Button, Dropdown, Navbar } from "react-daisyui";
 import { HiMenuAlt2 } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 
 export default function MasterLayout(): JSX.Element {
@@ -12,11 +12,11 @@ export default function MasterLayout(): JSX.Element {
       <Navbar
         className={twMerge(
           "fixed z-20 bg-base-100",
-          "border-b border-b-base-200"
+          "border-b border-b-base-200",
         )}
       >
         <Navbar.Start>
-          <Button shape="circle" color="ghost">
+          <Button color="ghost" shape="circle">
             <HiMenuAlt2 className="h-5 w-5" />
           </Button>
 
@@ -30,14 +30,14 @@ export default function MasterLayout(): JSX.Element {
 
           <ThemeChanger className="mr-1" />
 
-          <Dropdown end className="pr-3">
+          <Dropdown className="pr-3" end>
             <Dropdown.Toggle button={false}>
-              <Button color="ghost" shape="circle" className="avatar">
+              <Button className="avatar" color="ghost" shape="circle">
                 <div className="w-10 rounded-full">
                   <img
-                    src="https://avatars.githubusercontent.com/u/21959017?s=400&u=1c2711bcd2713d682bf553835a6dce998c6fd49b&v=4"
-                    loading="lazy"
                     alt="Profile"
+                    loading="lazy"
+                    src="https://avatars.githubusercontent.com/u/21959017?s=400&u=1c2711bcd2713d682bf553835a6dce998c6fd49b&v=4"
                   />
                 </div>
               </Button>
