@@ -3,7 +3,7 @@ import SuspenseOutlet from "@/components/SuspenseOutlet";
 import ThemeChanger from "@/components/ThemeChanger";
 import { Button, Dropdown, Navbar } from "react-daisyui";
 import { HiMenuAlt2 } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 
 export default function MasterLayout(): JSX.Element {
