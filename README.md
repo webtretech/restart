@@ -1,6 +1,6 @@
 ## Features (included)
 
-- ⚡️ [React 18](https://github.com/facebook/react/), [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), and [Vite](https://github.com/vitejs/vite)
+- ⚡️ [React 19](https://github.com/facebook/react/), [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), and [Vite](https://github.com/vitejs/vite)
 
 - 🌍 [I18n ready](./src/i18n) — includes internationalization
 
@@ -10,7 +10,7 @@
 
 - 🔗 Routing via [`react-router`](./src/router) — with lazy loading and protected routes support
 
-- ⛔ Error handling with [`error-boundary`](https://github.com/bvaughn/react-error-boundary) — can also be used for logging to third-party services
+- ⛔ Error handling with [`error-boundary`](./src/components/ErrorBoundary.tsx) — can also be used for logging to third-party services
 
 - 🎨 [DaisyUI](https://github.com/saadeghi/daisyui) and [react-daisyui](https://github.com/daisyui/react-daisyui) — the most popular Tailwind CSS component library.
 
@@ -32,7 +32,7 @@
 
 ### Plugins
 
-- [`vite-plugin-ejs`](https://github.com/trapcodeio/vite-plugin-ejs) - use ejs in your HTML
+- [`vite-plugin-react-swc`](https://github.com/vitejs/vite-plugin-react-swc) - use ejs in your HTML
 
 ## Checklist
 
