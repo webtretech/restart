@@ -29,7 +29,7 @@ export default function Home(): JSX.Element {
       <div className="m-auto">
         <Card className="w-96 bg-neutral text-neutral-content">
           <Card.Body className="items-center text-center">
-            <Card.Title tag="h2" className="font-sans text-8xl">
+            <Card.Title className="font-sans text-8xl" tag="h2">
               {counter}
             </Card.Title>
             <p className="p-4 text-sm">

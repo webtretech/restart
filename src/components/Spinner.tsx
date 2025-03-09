@@ -9,11 +9,11 @@ export default function Spinner(props: SpinnerProps): JSX.Element {
   return (
     <div className="flex h-screen">
       <TailSpin
-        radius="1"
-        width="50"
-        height="50"
-        visible={true}
         ariaLabel="tail-spin-loader"
+        height="50"
+        radius="1"
+        visible={true}
+        width="50"
         wrapperClass="mx-auto mt-[25vh]"
         {...props}
       />

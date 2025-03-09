@@ -14,9 +14,9 @@ export default function LanguageChanger({
   const language = useAppSelector(getLanguage);
 
   return (
-    <Dropdown end className={className}>
+    <Dropdown className={className} end>
       <Dropdown.Toggle button={false}>
-        <Button shape="circle" color="ghost" className="w-[4.6rem]">
+        <Button className="w-[4.6rem]" color="ghost" shape="circle">
           <LuLanguages className="h-5 w-5" />
           {language.slice(0, 2).toUpperCase()}
         </Button>
