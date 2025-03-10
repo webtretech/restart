@@ -5,14 +5,12 @@ import routes from "@/router/routes";
 import { createBrowserRouter, type RouteObject } from "react-router";
 
 const wrappedRouter = (routes: AppRouteObject[]): RouteObject[] => {
-  return routes.map((route: AppRouteObject) => {
-    const { children, element, ...otherRouteProps } = route;
+  return routes.map((route) => {
+    const { children, ...otherRouteProps } = route;
 
     const newRoute: RouteObject = { ...otherRouteProps };
     newRoute.errorElement = <ErrorBoundary />;
     newRoute.hydrateFallbackElement = <Spinner />;
-
-    newRoute.element = element;
 
     if (Array.isArray(children) && children.length) {
       newRoute.children = wrappedRouter(children);
@@ -22,5 +20,4 @@ const wrappedRouter = (routes: AppRouteObject[]): RouteObject[] => {
   });
 };
 
-const router = createBrowserRouter(wrappedRouter(routes));
-export default router;
+export default createBrowserRouter(wrappedRouter(routes));
