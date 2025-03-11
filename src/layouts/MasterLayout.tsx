@@ -1,5 +1,5 @@
 import Language from "@/components/Language";
-import SuspenseOutlet from "@/components/SuspenseOutlet";
+import Outlet from "@/components/Outlet";
 import Theme from "@/components/Theme";
 import { Button, Dropdown, Navbar } from "react-daisyui";
 import { HiMenuAlt2 } from "react-icons/hi";
@@ -55,7 +55,7 @@ export default function MasterLayout() {
         </Navbar.End>
       </Navbar>
 
-      <SuspenseOutlet />
+      <Outlet />
     </>
   );
 }
