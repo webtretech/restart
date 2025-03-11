@@ -15,11 +15,7 @@ import { themeChange } from "theme-change";
 // Set the corresponding daisyUI themes from "tailwind.config.cjs"
 const themes = { dark: "dark", light: "light" };
 
-export default function ThemeChanger({
-  className,
-}: {
-  className?: string;
-}): JSX.Element {
+export default function Theme({ className }: { className?: string }) {
   const dispatch = useAppDispatch();
   const theme = useAppSelector(getTheme);
   const deviceThemeDark = useMedia("(prefers-color-scheme: dark)", false);

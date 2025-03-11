@@ -5,11 +5,7 @@ import clsx from "clsx";
 import { Button, Dropdown } from "react-daisyui";
 import { LuLanguages } from "react-icons/lu";
 
-export default function LanguageChanger({
-  className,
-}: {
-  className: string;
-}): JSX.Element {
+export default function Language({ className }: { className: string }) {
   const dispatch = useAppDispatch();
   const language = useAppSelector(getLanguage);
 
