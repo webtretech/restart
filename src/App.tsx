@@ -5,7 +5,7 @@ import router from "@/router";
 import { useEffect } from "react";
 import { RouterProvider } from "react-router";
 
-export default function App(): JSX.Element {
+export default function App() {
   const language = useAppSelector(getLanguage);
 
   useEffect(() => {

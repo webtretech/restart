@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import { Button, Card } from "react-daisyui";
 import { useTranslation } from "react-i18next";
 
-export default function Home(): JSX.Element {
+export default function Home() {
   const { t } = useTranslation();
 
   // Access the dispatcher & fully-typed state
