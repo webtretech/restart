@@ -9,7 +9,6 @@ export default function ErrorBoundary() {
     if (import.meta.env.PROD) {
       /**
        * TODO: log errors to third-party service
-       * @see https://github.com/grafana/loki
        */
     } else {
       console.error(error);
