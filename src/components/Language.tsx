@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Button, Dropdown } from "react-daisyui";
 import { LuLanguages } from "react-icons/lu";
 
-export default function LanguageChanger({
+export default function Language({
   className,
 }: {
   className: string;

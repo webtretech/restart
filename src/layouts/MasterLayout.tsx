@@ -1,12 +1,12 @@
-import LanguageChanger from "@/components/LanguageChanger";
+import Language from "@/components/Language";
 import SuspenseOutlet from "@/components/SuspenseOutlet";
-import ThemeChanger from "@/components/ThemeChanger";
+import Theme from "@/components/Theme";
 import { Button, Dropdown, Navbar } from "react-daisyui";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 
-export default function MasterLayout(): JSX.Element {
+export default function MasterLayout() {
   return (
     <>
       <Navbar
@@ -26,9 +26,9 @@ export default function MasterLayout(): JSX.Element {
         </Navbar.Start>
 
         <Navbar.End>
-          <LanguageChanger className="mr-1" />
+          <Language className="mr-1" />
 
-          <ThemeChanger className="mr-1" />
+          <Theme className="mr-1" />
 
           <Dropdown className="pr-3" end>
             <Dropdown.Toggle button={false}>
